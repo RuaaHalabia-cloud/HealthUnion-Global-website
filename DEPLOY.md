@@ -49,6 +49,45 @@ le volume d'un formulaire de contact.
 À définir avant le build : Create React App fige les variables au moment de la
 compilation. Après changement, relancer un déploiement.
 
+## 2 bis. Déploiement Railway
+
+Deux services distincts issus du même dépôt, plus une base. L'ordre compte :
+le frontend a besoin de l'URL du backend, et le backend a besoin de l'URL du
+frontend pour CORS.
+
+**1. Base de données.** Dans le projet Railway, ajouter un service MongoDB.
+Railway expose une variable de connexion à référencer ensuite.
+
+**2. Service backend.**
+
+| Réglage | Valeur |
+|---|---|
+| Root Directory | `backend` |
+| Start Command | `uvicorn server:app --host 0.0.0.0 --port $PORT` |
+
+Renseigner les variables de la section 1, en référençant l'URL Mongo du
+service de base de données. Mettre provisoirement `CORS_ORIGINS=*`.
+Déployer, puis générer un domaine public et noter l'URL obtenue.
+
+**3. Service frontend.**
+
+| Réglage | Valeur |
+|---|---|
+| Root Directory | `frontend` |
+| Build Command | `yarn build` |
+| Start Command | `node server.js` |
+
+Définir `REACT_APP_BACKEND_URL` avec l'URL du backend, sans slash final.
+Cette valeur est figée au moment du build : tout changement impose un
+redéploiement. Générer un domaine public et noter l'URL.
+
+**4. Refermer CORS.** Revenir au service backend et remplacer `CORS_ORIGINS=*`
+par l'URL du frontend, puis par le domaine définitif une fois le DNS en place.
+
+Le fichier `frontend/server.js` sert le dossier `build` sans aucune
+dépendance externe, avec repli sur `index.html` pour que les routes `/en` et
+`/ar` fonctionnent au rechargement.
+
 ## 3. DNS
 
 | Type | Nom | Valeur |
