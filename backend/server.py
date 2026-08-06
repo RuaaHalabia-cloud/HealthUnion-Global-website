@@ -130,10 +130,10 @@ async def upload_file(file: UploadFile = File(...)):
 
     doc = {
         "id": file_id,
-        "storage_path": result.get("path", path),
+        "storage_path": result["path"],
         "original_filename": filename,
         "content_type": "application/pdf",
-        "size": result.get("size", len(data)),
+        "size": result["size"],
         "is_deleted": False,
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
