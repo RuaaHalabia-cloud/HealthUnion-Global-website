@@ -7,7 +7,7 @@ from bson import ObjectId
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List, Optional
 import uuid
 from datetime import datetime, timezone, timedelta
@@ -42,6 +42,8 @@ logger = logging.getLogger(__name__)
 class ContactSubmissionCreate(BaseModel):
     model_config = ConfigDict(extra="ignore")
     company_name: str
+    contact_email: EmailStr
+    contact_phone: Optional[str] = ""
     product_category: str
     device_classification: Optional[str] = ""
     target_markets: List[str] = Field(default_factory=list)

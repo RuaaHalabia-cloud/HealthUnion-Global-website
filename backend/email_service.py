@@ -71,6 +71,8 @@ def _build_email_html(submission: dict, has_attachment: bool = False) -> str:
     <h2>New Pre-diagnostic Intake, HealthUnion Global</h2>
     <table cellpadding="6" style="border-collapse:collapse;font-family:Arial,sans-serif;font-size:14px">
       <tr><td><b>Company</b></td><td>{_esc(submission.get('company_name'))}</td></tr>
+      <tr><td><b>Email</b></td><td><a href="mailto:{_esc(submission.get('contact_email'))}">{_esc(submission.get('contact_email'))}</a></td></tr>
+      <tr><td><b>Phone</b></td><td>{_esc(submission.get('contact_phone')) or 'not provided'}</td></tr>
       <tr><td><b>Product Category</b></td><td>{_esc(submission.get('product_category'))}</td></tr>
       <tr><td><b>Device Classification</b></td><td>{_esc(submission.get('device_classification')) or 'n/a'}</td></tr>
       <tr><td><b>Target Markets</b></td><td>{_esc(markets)}</td></tr>
@@ -87,6 +89,8 @@ def _build_text(submission: dict) -> str:
     return (
         "New Pre-diagnostic Intake, HealthUnion Global\n\n"
         f"Company: {submission.get('company_name','')}\n"
+        f"Email: {submission.get('contact_email','')}\n"
+        f"Phone: {submission.get('contact_phone','') or 'not provided'}\n"
         f"Product Category: {submission.get('product_category','')}\n"
         f"Device Classification: {submission.get('device_classification','') or 'n/a'}\n"
         f"Target Markets: {markets}\n"
@@ -96,11 +100,14 @@ def _build_text(submission: dict) -> str:
     )
 
 
-def _send_smtp(c: dict, subject: str, html: str, text: str, attachment=None) -> bool:
+def _send_smtp(c: dict, subject: str, html: str, text: str, attachment=None, submission=None) -> bool:
     msg = EmailMessage()
     msg["Subject"] = subject
     msg["From"] = c["from_email"]
     msg["To"] = c["to_email"]
+    reply_to = (submission or {}).get("contact_email") if submission else None
+    if reply_to:
+        msg["Reply-To"] = reply_to
     if c["bcc"]:
         msg["Bcc"] = ", ".join(c["bcc"])
     msg.set_content(text)
@@ -148,7 +155,7 @@ def notify_new_lead(submission: dict, attachment=None) -> bool:
 
     try:
         if c["provider"] == "smtp":
-            _send_smtp(c, subject, html, text, attachment)
+            _send_smtp(c, subject, html, text, attachment, submission)
             logger.info("[email] SMTP notification sent for %s", submission.get("company_name"))
             return True
 

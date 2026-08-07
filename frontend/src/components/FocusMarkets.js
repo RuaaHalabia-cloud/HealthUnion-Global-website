@@ -3,13 +3,15 @@ import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Reliable flag CDN; GCC uses the UAE flag as a representative Gulf marker.
+// National flags from a reliable CDN. The GCC uses the council emblem,
+// served locally so the section never depends on an external host.
 const FLAGS = {
   usa: "https://flagcdn.com/w640/us.png",
   canada: "https://flagcdn.com/w640/ca.png",
   saudi: "https://flagcdn.com/w640/sa.png",
-  gcc: "https://flagcdn.com/w640/ae.png",
+  gcc: "/images/gcc-emblem.jpg",
 };
+const CONTAIN = { gcc: true };
 const ACCENT = { usa: "#1E3A8A", canada: "#0D9488", saudi: "#0A2240", gcc: "#0D9488" };
 const FALLBACK = "linear-gradient(135deg,#0A2240 0%,#1E3A8A 50%,#0D9488 100%)";
 
@@ -36,7 +38,10 @@ function Tile({ m, className, active, onHover }) {
         onError={(e) => {
           e.currentTarget.style.display = "none";
         }}
-        className="h-full w-full object-cover transition-[filter,transform] duration-500 group-hover:scale-[1.05]"
+        className={cn(
+          "h-full w-full transition-[filter,transform] duration-500 group-hover:scale-[1.05]",
+          CONTAIN[m.key] ? "object-contain p-6" : "object-cover"
+        )}
         style={{ filter: isActive ? "grayscale(0) brightness(1)" : "grayscale(0.85) brightness(0.82)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A2240]/80 via-[#0A2240]/15 to-transparent" />

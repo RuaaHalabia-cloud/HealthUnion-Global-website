@@ -20,6 +20,7 @@ import {
   MessageSquare,
   Building2,
   FileUp,
+  Phone,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -52,6 +53,8 @@ export default function Contact() {
 
   const [form, setForm] = useState({
     company_name: "",
+    contact_email: "",
+    contact_phone: "",
     product_category: "",
     device_classification: "",
     target_markets: [],
@@ -111,6 +114,11 @@ export default function Contact() {
   const validate = () => {
     const e = {};
     if (!form.company_name.trim()) e.company_name = t("contact.form.errors.required");
+    if (!form.contact_email.trim()) {
+      e.contact_email = t("contact.form.errors.required");
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.contact_email.trim())) {
+      e.contact_email = t("contact.form.errors.email");
+    }
     if (!form.product_category) e.product_category = t("contact.form.errors.required");
     if (!form.message.trim()) e.message = t("contact.form.errors.required");
     if (!form.consent) e.consent = t("contact.form.errors.consent");
@@ -137,6 +145,8 @@ export default function Contact() {
   const resetForm = () => {
     setForm({
       company_name: "",
+      contact_email: "",
+      contact_phone: "",
       product_category: "",
       device_classification: "",
       target_markets: [],
@@ -198,7 +208,7 @@ export default function Contact() {
       <section className="bg-white py-14 sm:py-16">
         <div className="hu-container">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
-            {/* LEFT — form */}
+            {/* LEFT, form */}
             <div className="lg:col-span-7">
               {success ? (
                 <Reveal>
@@ -268,6 +278,39 @@ export default function Contact() {
                         />
                       </div>
                       {errors.company_name && <p className="mt-1.5 text-sm text-[#B91C1C]">{errors.company_name}</p>}
+                    </div>
+
+                    {/* Email + Phone */}
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                      <div>
+                        <Label className="text-sm font-medium text-[#0A2240]">{t("contact.form.email")} *</Label>
+                        <div className="relative mt-2">
+                          <Mail className="pointer-events-none absolute start-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#0A2240]/40" />
+                          <Input
+                            data-testid="intake-email-input"
+                            type="email"
+                            value={form.contact_email}
+                            onChange={(e) => set("contact_email", e.target.value)}
+                            placeholder={t("contact.form.emailPlaceholder")}
+                            className={`ps-11 ${inputCls}`}
+                          />
+                        </div>
+                        {errors.contact_email && <p className="mt-1.5 text-sm text-[#B91C1C]">{errors.contact_email}</p>}
+                      </div>
+                      <div>
+                        <Label className="text-sm font-medium text-[#0A2240]">{t("contact.form.phone")}</Label>
+                        <div className="relative mt-2">
+                          <Phone className="pointer-events-none absolute start-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#0A2240]/40" />
+                          <Input
+                            data-testid="intake-phone-input"
+                            type="tel"
+                            value={form.contact_phone}
+                            onChange={(e) => set("contact_phone", e.target.value)}
+                            placeholder={t("contact.form.phonePlaceholder")}
+                            className={`ps-11 ${inputCls}`}
+                          />
+                        </div>
+                      </div>
                     </div>
 
                     {/* Category + Class */}
@@ -430,7 +473,7 @@ export default function Contact() {
               )}
             </div>
 
-            {/* RIGHT — info */}
+            {/* RIGHT, info */}
             <div className="space-y-5 lg:col-span-5">
               {/* What happens next */}
               <div className="rounded-2xl border border-[#1E3A8A]/10 bg-[#F8FAFC] p-6 sm:p-7">

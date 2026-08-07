@@ -291,6 +291,10 @@
       "subtitle": "Tell us about your product and target markets. Attach a technical PDF if you have one, and we will get back to you with a clear next step.",
       "company": "Company Name",
       "companyPlaceholder": "Your company's legal name",
+      "email": "Work Email",
+      "emailPlaceholder": "name@company.com",
+      "phone": "Phone Number (optional)",
+      "phonePlaceholder": "+1 000 000 0000",
       "productCategory": "Product Category",
       "productCategoryPlaceholder": "Select a category",
       "deviceClass": "Device Classification",
@@ -325,7 +329,8 @@
         "fileType": "Only PDF files are accepted.",
         "fileSize": "File is too large (max 20 MB).",
         "uploadFailed": "File upload failed. Please try again.",
-        "submitFailed": "Something went wrong. Please try again."
+        "submitFailed": "Something went wrong. Please try again.",
+        "email": "Please enter a valid email address"
       }
     },
     "success": {
