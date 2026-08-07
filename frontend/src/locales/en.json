@@ -378,9 +378,22 @@
       "title": "Other ways to reach us",
       "subtitle": "Pick the channel that suits you.",
       "emailLabel": "Email",
-      "email": "hello@healthunion.global",
+      "email": "info@healthunionglobal.com",
+      "phonesLabel": "Phone",
+      "phones": [
+        {
+          "label": "Canada",
+          "display": "+1 905 965 1448",
+          "tel": "+19059651448"
+        },
+        {
+          "label": "Saudi Arabia",
+          "display": "+966 59 736 5207",
+          "tel": "+966597365207"
+        }
+      ],
       "locationLabel": "Offices",
-      "location": "Canada & Riyadh, Saudi Arabia",
+      "location": "Canada and Riyadh, Saudi Arabia",
       "privacyNote": "Your data is handled in line with our",
       "privacyLink": "privacy notice"
     },
@@ -400,7 +413,7 @@
       "GCC Region"
     ],
     "contact": "Get in touch",
-    "offices": "Offices in Canada & Riyadh, Saudi Arabia",
+    "offices": "Offices in Canada and Riyadh, Saudi Arabia",
     "disclaimer": "For markets outside Saudi Arabia, we provide technical submission services only and do not offer local AR hosting or physical logistics.",
     "rights": "All rights reserved.",
     "privacy": "Privacy",
@@ -501,6 +514,6 @@
     ],
     "requestTitle": "Questions or data requests",
     "requestBody": "For any question about this notice, or to exercise your rights, contact us through our contact page or by email. We respond to legitimate requests in line with applicable law.",
-    "email": "privacy@healthunion.global"
+    "email": "info@healthunionglobal.com"
   }
 }

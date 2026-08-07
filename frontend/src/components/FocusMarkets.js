@@ -11,7 +11,6 @@ const FLAGS = {
   saudi: "https://flagcdn.com/w640/sa.png",
   gcc: "/images/gcc-emblem.jpg",
 };
-const CONTAIN = { gcc: true };
 const ACCENT = { usa: "#1E3A8A", canada: "#0D9488", saudi: "#0A2240", gcc: "#0D9488" };
 const FALLBACK = "linear-gradient(135deg,#0A2240 0%,#1E3A8A 50%,#0D9488 100%)";
 
@@ -38,10 +37,7 @@ function Tile({ m, className, active, onHover }) {
         onError={(e) => {
           e.currentTarget.style.display = "none";
         }}
-        className={cn(
-          "h-full w-full transition-[filter,transform] duration-500 group-hover:scale-[1.05]",
-          CONTAIN[m.key] ? "object-contain p-6" : "object-cover"
-        )}
+        className="h-full w-full object-cover transition-[filter,transform] duration-500 group-hover:scale-[1.05]"
         style={{ filter: isActive ? "grayscale(0) brightness(1)" : "grayscale(0.85) brightness(0.82)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A2240]/80 via-[#0A2240]/15 to-transparent" />

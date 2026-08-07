@@ -163,6 +163,8 @@ export default function Contact() {
   const stepIcons = [Search, ShieldCheck, Clock];
   const steps = t("contact.sidebar.steps", { returnObjects: true });
   const stepList = Array.isArray(steps) ? steps : [];
+  const rawPhones = t("contact.info.phones", { returnObjects: true });
+  const phoneList = Array.isArray(rawPhones) ? rawPhones : [];
   const statIcons = [Clock, Globe, Lock, FileUp];
   const stats = t("contact.stats", { returnObjects: true });
   const statList = Array.isArray(stats) ? stats : [];
@@ -514,6 +516,24 @@ export default function Contact() {
                     </div>
                     <ArrowRight className="h-4 w-4 shrink-0 text-[#1E3A8A]/30 transition-all group-hover:translate-x-1 group-hover:text-[#0D9488] rtl-flip" />
                   </a>
+                  {phoneList.map((ph) => (
+                    <a
+                      key={ph.tel}
+                      href={`tel:${ph.tel}`}
+                      className="group flex items-center gap-4 rounded-2xl border border-[#1E3A8A]/10 bg-white p-4 transition-colors hover:border-[#0D9488]/30"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0D9488]/10 text-[#0D9488]">
+                        <Phone className="h-5 w-5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-sm font-semibold text-[#0A2240]">
+                          {t("contact.info.phonesLabel")} · {ph.label}
+                        </div>
+                        <div className="hu-mono text-sm text-[#0A2240]/65" dir="ltr">{ph.display}</div>
+                      </div>
+                      <ArrowRight className="h-4 w-4 shrink-0 text-[#1E3A8A]/30 transition-all group-hover:translate-x-1 group-hover:text-[#0D9488] rtl-flip" />
+                    </a>
+                  ))}
                   <div className="flex items-center gap-4 rounded-2xl border border-[#1E3A8A]/10 bg-white p-4">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#1E3A8A]/8 text-[#1E3A8A]">
                       <MapPin className="h-5 w-5" />

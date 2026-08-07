@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { MapPin, ArrowUpRight, Mail } from "lucide-react";
+import { MapPin, ArrowUpRight, Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/Logo";
 
 export default function Footer() {
@@ -16,6 +16,8 @@ export default function Footer() {
     { to: `${base}/contact`, label: t("nav.contact") },
     { to: `${base}/privacy`, label: t("footer.privacy") },
   ];
+  const rawPhones = t("contact.info.phones", { returnObjects: true });
+  const footerPhones = Array.isArray(rawPhones) ? rawPhones : [];
   const markets = t("footer.marketsList", { returnObjects: true });
   const marketList = Array.isArray(markets) ? markets : [];
 
@@ -66,6 +68,19 @@ export default function Footer() {
             <div className="mt-6 flex items-start gap-2.5 text-sm text-white/60">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" />
               <span>{t("footer.offices")}</span>
+            </div>
+            <div className="mt-3 space-y-1.5">
+              {footerPhones.map((ph) => (
+                <a
+                  key={ph.tel}
+                  href={`tel:${ph.tel}`}
+                  className="flex items-center gap-2.5 text-sm text-white/60 transition-colors hover:text-white"
+                >
+                  <Phone className="h-4 w-4 shrink-0 text-[#0D9488]" />
+                  <span className="hu-mono" dir="ltr">{ph.display}</span>
+                  <span className="text-white/40">{ph.label}</span>
+                </a>
+              ))}
             </div>
           </div>
 

@@ -378,7 +378,20 @@
       "title": "طرق أخرى للتواصل",
       "subtitle": "اختر القناة التي تناسبك.",
       "emailLabel": "البريد الإلكتروني",
-      "email": "hello@healthunion.global",
+      "email": "info@healthunionglobal.com",
+      "phonesLabel": "الهاتف",
+      "phones": [
+        {
+          "label": "كندا",
+          "display": "+1 905 965 1448",
+          "tel": "+19059651448"
+        },
+        {
+          "label": "السعودية",
+          "display": "+966 59 736 5207",
+          "tel": "+966597365207"
+        }
+      ],
       "locationLabel": "المكاتب",
       "location": "كندا والرياض، السعودية",
       "privacyNote": "تتم معالجة بياناتك بما يتوافق مع",
@@ -501,6 +514,6 @@
     ],
     "requestTitle": "الأسئلة أو طلبات البيانات",
     "requestBody": "لأي سؤال حول هذا الإشعار أو لممارسة حقوقك، تواصل معنا عبر صفحة التواصل أو بالبريد الإلكتروني. نردّ على الطلبات المشروعة وفقًا للقوانين السارية.",
-    "email": "privacy@healthunion.global"
+    "email": "info@healthunionglobal.com"
   }
 }
