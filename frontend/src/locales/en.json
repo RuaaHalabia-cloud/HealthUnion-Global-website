@@ -330,6 +330,7 @@
         "fileSize": "File is too large (max 20 MB).",
         "uploadFailed": "File upload failed. Please try again.",
         "submitFailed": "Something went wrong. Please try again.",
+        "emailDeliveryFailed": "Your submission was saved, but the email notification could not be delivered. Please email info@healthunionglobal.com directly.",
         "email": "Please enter a valid email address"
       }
     },

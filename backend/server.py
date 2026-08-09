@@ -217,8 +217,12 @@ async def submit_contact(payload: ContactSubmissionCreate):
         except Exception as e:
             logger.error("Could not purge uploaded file: %s", e)
 
-    return {"id": submission.id, "status": "received",
-            "email_enabled": email_service.is_enabled()}
+    return {
+        "id": submission.id,
+        "status": "received",
+        "email_enabled": email_service.is_enabled(),
+        "email_sent": sent if not is_spam else True,
+    }
 
 
 app.include_router(api_router)

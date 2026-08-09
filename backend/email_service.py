@@ -13,14 +13,15 @@ SMTP provider (recommended, no third party service):
   SMTP_USER      = mailbox login, usually the full address
   SMTP_PASSWORD  = mailbox password or app password
 
-API providers (optional, kept for later):
-  EMAIL_API_KEY  = provider API key
+API providers:
+  RESEND_API_KEY = Resend API key (EMAIL_API_KEY remains a legacy fallback)
 
 When the provider is not configured this module is a NO-OP: it logs the lead
 and returns gracefully, so nothing is ever lost and it can be enabled by
 setting environment variables only.
 """
 import os
+import base64
 import ssl
 import smtplib
 import logging
@@ -34,7 +35,11 @@ logger = logging.getLogger(__name__)
 def _config():
     return {
         "provider": (os.environ.get("EMAIL_PROVIDER") or "").strip().lower(),
-        "api_key": (os.environ.get("EMAIL_API_KEY") or "").strip(),
+        "api_key": (
+            os.environ.get("RESEND_API_KEY")
+            or os.environ.get("EMAIL_API_KEY")
+            or ""
+        ).strip(),
         "from_email": (os.environ.get("EMAIL_FROM") or "").strip(),
         "to_email": (os.environ.get("EMAIL_TO") or "").strip(),
         "bcc": [x.strip() for x in (os.environ.get("EMAIL_BCC") or "").split(",") if x.strip()],
@@ -51,7 +56,9 @@ def is_enabled() -> bool:
         return False
     if c["provider"] == "smtp":
         return bool(c["smtp_host"] and c["smtp_user"] and c["smtp_password"])
-    return bool(c["api_key"])
+    if c["provider"] in {"brevo", "resend"}:
+        return bool(c["api_key"])
+    return False
 
 
 def _esc(value) -> str:
@@ -134,6 +141,40 @@ def _send_smtp(c: dict, subject: str, html: str, text: str, attachment=None, sub
     return True
 
 
+def _send_resend(c: dict, subject: str, html: str, text: str, attachment=None, submission=None) -> bool:
+    payload = {
+        "from": c["from_email"],
+        "to": [c["to_email"]],
+        "subject": subject,
+        "html": html,
+        "text": text,
+    }
+
+    reply_to = (submission or {}).get("contact_email")
+    if reply_to:
+        payload["reply_to"] = reply_to
+    if c["bcc"]:
+        payload["bcc"] = c["bcc"]
+    if attachment:
+        filename, data = attachment
+        payload["attachments"] = [{
+            "filename": filename,
+            "content": base64.b64encode(data).decode("ascii"),
+        }]
+
+    resp = requests.post(
+        "https://api.resend.com/emails",
+        headers={
+            "Authorization": f"Bearer {c['api_key']}",
+            "Content-Type": "application/json",
+        },
+        json=payload,
+        timeout=20,
+    )
+    resp.raise_for_status()
+    return True
+
+
 def notify_new_lead(submission: dict, attachment=None) -> bool:
     """
     Send the lead notification.
@@ -176,18 +217,7 @@ def notify_new_lead(submission: dict, attachment=None) -> bool:
             return True
 
         if c["provider"] == "resend":
-            resp = requests.post(
-                "https://api.resend.com/emails",
-                headers={"Authorization": f"Bearer {c['api_key']}", "Content-Type": "application/json"},
-                json={
-                    "from": c["from_email"],
-                    "to": [c["to_email"]],
-                    "subject": subject,
-                    "html": html,
-                },
-                timeout=20,
-            )
-            resp.raise_for_status()
+            _send_resend(c, subject, html, text, attachment, submission)
             logger.info("[email] Resend notification sent for %s", submission.get("company_name"))
             return True
 
