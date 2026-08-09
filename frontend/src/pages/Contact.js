@@ -131,7 +131,11 @@ export default function Contact() {
     if (!validate()) return;
     setSubmitting(true);
     try {
-      await submitContact({ ...form, locale: lang, file_id: file ? file.file_id : null });
+      const result = await submitContact({ ...form, locale: lang, file_id: file ? file.file_id : null });
+      if (result?.email_sent === false) {
+        toast.error(t("contact.form.errors.emailDeliveryFailed"));
+        return;
+      }
       setSuccess(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {

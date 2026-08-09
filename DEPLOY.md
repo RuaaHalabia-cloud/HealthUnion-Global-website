@@ -13,32 +13,16 @@ par email, avec le PDF en pièce jointe. Rien n'est conservé au repos.
 | `DB_NAME` | `healthunion` | |
 | `APP_NAME` | `healthunion` | |
 | `CORS_ORIGINS` | `https://healthunionglobal.com,https://www.healthunionglobal.com` | sans espace, sans slash final |
-| `EMAIL_PROVIDER` | `smtp` | |
-| `EMAIL_FROM` | `info@healthunionglobal.com` | doit correspondre à `SMTP_USER` |
+| `EMAIL_PROVIDER` | `resend` | envoi HTTPS, compatible avec Railway |
+| `EMAIL_FROM` | `HealthUnion Global <website@notifications.healthunionglobal.com>` | sous-domaine vérifié dans Resend |
 | `EMAIL_TO` | `info@healthunionglobal.com` | destinataire des demandes |
-| `EMAIL_BCC` | `lucas@industrialdecision.com` | copie technique, plusieurs adresses séparées par des virgules |
-| `SMTP_HOST` | selon l'hébergeur de la boîte | voir tableau ci-dessous |
-| `SMTP_PORT` | `587` | ou `465` si TLS implicite |
-| `SMTP_USER` | `info@healthunionglobal.com` | |
-| `SMTP_PASSWORD` | mot de passe d'application | jamais le mot de passe principal |
+| `EMAIL_BCC` | vide | aucune copie technique des données clients |
+| `RESEND_API_KEY` | secret Railway | clé limitée à l'envoi depuis le domaine vérifié |
 
-**Boîte hébergée sur Google Workspace.** Le domaine est chez GoDaddy, la
-messagerie chez Google : les réglages SMTP viennent donc de Google.
-
-| Paramètre | Valeur |
-|---|---|
-| `SMTP_HOST` | `smtp.gmail.com` |
-| `SMTP_PORT` | `587` (STARTTLS) ou `465` (SSL) |
-| `SMTP_USER` | l'adresse complète, `info@healthunionglobal.com` |
-| `SMTP_PASSWORD` | mot de passe d'application de 16 caractères |
-
-Le mot de passe habituel de la boîte ne fonctionne pas. Google a coupé l'accès
-par mot de passe simple le 1er mai 2025. Une erreur `535 5.7.8 Username and
-Password not accepted` signifie systématiquement que le mot de passe utilisé
-n'est pas un mot de passe d'application.
-
-Quota d'envoi : 2 000 messages par jour sur Workspace, sans commune mesure avec
-le volume d'un formulaire de contact.
+Le destinataire `info@healthunionglobal.com` reste géré par Google Workspace et
+transfère les notifications à Noor et Zak. Le serveur ne se connecte plus à
+Google par SMTP : il appelle l'API HTTPS de Resend. Le champ `Reply-To` est
+automatiquement renseigné avec l'adresse du client.
 
 ## 2. Variable d'environnement, service frontend
 
@@ -101,6 +85,10 @@ Les enregistrements se posent dans la zone DNS GoDaddy, avec des valeurs
 fournies par Google. La clé DKIM se génère dans la console d'administration,
 Applications, Google Workspace, Gmail, Authentifier les e-mails.
 
+Le sous-domaine d'envoi `notifications.healthunionglobal.com` possède en plus
+les enregistrements SPF, DKIM et MX fournis par Resend. Ils doivent rester
+séparés des enregistrements Google et Railway du domaine principal.
+
 SPF et DKIM ne sont pas optionnels. Sans eux le formulaire semble fonctionner
 et les notifications sont filtrées en silence. Compter jusqu'à 48 heures de
 propagation. Passer DMARC en `p=quarantine` après quelques semaines
@@ -114,30 +102,11 @@ d'observation.
 4. Vérifier dans l'en-tête reçu que SPF et DKIM affichent `pass`.
 5. Renvoyer une demande sans PDF, contrôler que le formulaire aboutit.
 
-## 4 bis. Mot de passe d'application Google Workspace
+## 4 bis. Clé API Resend
 
-Deux conditions, dans cet ordre. La première relève de l'administrateur du
-domaine, la seconde de l'utilisateur de la boîte.
-
-**1. Autoriser les mots de passe d'application (administrateur)**
-
-Console d'administration Google Workspace, puis Sécurité, Authentification,
-Validation en deux étapes. Vérifier que l'option autorisant les utilisateurs à
-générer des mots de passe d'application est activée. Si elle est désactivée,
-l'utilisateur ne verra tout simplement pas l'option apparaître.
-
-**2. Générer le mot de passe (utilisateur de la boîte)**
-
-1. La validation en deux étapes doit être active sur le compte. Sans elle, les
-   mots de passe d'application n'existent pas.
-2. Aller sur myaccount.google.com, section Sécurité, puis rechercher
-   App passwords.
-3. Créer une entrée nommée par exemple Website contact form.
-4. Copier la chaîne de 16 caractères en retirant les espaces affichés.
-
-La clé n'est montrée qu'une fois. Elle n'autorise que l'envoi, ne donne aucun
-accès à la boîte de réception ni au compte, et se révoque sans changer le mot
-de passe principal.
+Créer une clé avec le droit **Sending access** limité au domaine
+`notifications.healthunionglobal.com`, puis l'enregistrer uniquement comme
+secret Railway `RESEND_API_KEY`. Ne jamais la placer dans Git.
 
 ## 5. Fonctionnement du PDF
 
