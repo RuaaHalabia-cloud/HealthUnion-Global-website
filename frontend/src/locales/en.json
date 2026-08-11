@@ -380,17 +380,17 @@
       "subtitle": "Pick the channel that suits you.",
       "emailLabel": "Email",
       "email": "info@healthunionglobal.com",
-      "phonesLabel": "Phone",
+      "phonesLabel": "WhatsApp",
       "phones": [
         {
           "label": "Canada",
           "display": "+1 905 965 1448",
-          "tel": "+19059651448"
+          "whatsapp": "19059651448"
         },
         {
           "label": "Saudi Arabia",
           "display": "+966 59 236 9636",
-          "tel": "+966592369636"
+          "whatsapp": "966592369636"
         }
       ],
       "locationLabel": "Offices",

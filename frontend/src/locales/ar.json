@@ -380,17 +380,17 @@
       "subtitle": "اختر القناة التي تناسبك.",
       "emailLabel": "البريد الإلكتروني",
       "email": "info@healthunionglobal.com",
-      "phonesLabel": "الهاتف",
+      "phonesLabel": "واتساب",
       "phones": [
         {
           "label": "كندا",
           "display": "+1 905 965 1448",
-          "tel": "+19059651448"
+          "whatsapp": "19059651448"
         },
         {
           "label": "السعودية",
           "display": "+966 59 236 9636",
-          "tel": "+966592369636"
+          "whatsapp": "966592369636"
         }
       ],
       "locationLabel": "المكاتب",
