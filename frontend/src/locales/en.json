@@ -1,0 +1,520 @@
+{
+  "meta": {
+    "siteName": "HealthUnion Global",
+    "home": {
+      "title": "HealthUnion Global · Global Regulatory Compliance, Accelerated Market Access",
+      "description": "Premium regulatory affairs consulting bridging medical device and cosmetics manufacturers with the FDA, Health Canada, SFDA and GCC authorities."
+    },
+    "services": {
+      "title": "Services · HealthUnion Global",
+      "description": "FDA 510(k), Health Canada MDL/MDEL, SFDA GHAD authorized representation and GCC technical dossier submissions."
+    },
+    "about": {
+      "title": "About & Team · HealthUnion Global",
+      "description": "Cross-border regulatory expertise: North American Strategy Unit in Canada and Saudi Operations Unit in Riyadh."
+    },
+    "insights": {
+      "title": "Insights · HealthUnion Global",
+      "description": "Regulatory guidance and market access intelligence for medical device and cosmetics manufacturers."
+    },
+    "contact": {
+      "title": "Contact · HealthUnion Global",
+      "description": "Start your pre-diagnostic intake and book a compliance audit with HealthUnion Global."
+    },
+    "privacy": {
+      "title": "Privacy & Data Protection · HealthUnion Global",
+      "description": "How HealthUnion Global collects, uses and protects personal data, aligned with GDPR, PIPEDA and Saudi PDPL."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "markets": "Markets",
+    "services": "Services",
+    "about": "About & Team",
+    "insights": "Insights",
+    "contact": "Contact Us",
+    "cta": "Book a Consultation",
+    "mega": {
+      "label": "Regulatory services by market",
+      "viewAll": "View all services",
+      "groups": [
+        {
+          "key": "na",
+          "title": "North America",
+          "items": [
+            {
+              "title": "FDA 510(k) Submissions",
+              "desc": "US medical device clearances"
+            },
+            {
+              "title": "Health Canada MDL / MDEL",
+              "desc": "Licensing & establishment"
+            }
+          ]
+        },
+        {
+          "key": "saudi",
+          "title": "Saudi Arabia (SFDA)",
+          "items": [
+            {
+              "title": "GHAD Authorized Representation",
+              "desc": "Legal AR hosting in Riyadh"
+            },
+            {
+              "title": "MDMA & Lifecycle",
+              "desc": "Grant to post-market compliance"
+            }
+          ]
+        },
+        {
+          "key": "gcc",
+          "title": "Other GCC",
+          "items": [
+            {
+              "title": "Technical Dossiers",
+              "desc": "UAE, Qatar, Kuwait, Bahrain, Oman"
+            },
+            {
+              "title": "Cosmetics Notifications",
+              "desc": "Registration & labeling"
+            }
+          ]
+        }
+      ],
+      "promoTitle": "Not sure where to start?",
+      "promoText": "Get a free pre-diagnostic of your product's regulatory path."
+    }
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "readArticle": "Read article",
+    "viewServices": "View Services",
+    "allInsights": "View all insights",
+    "backToInsights": "Back to Insights",
+    "minRead": "min read",
+    "exploreServices": "Explore services",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "International Regulatory Affairs & Compliance",
+      "headline": "Global Regulatory Compliance. Accelerated Market Access.",
+      "subheadline": "We bridge innovative medical device and cosmetics manufacturers with the world's most stringent regulatory authorities: USA (FDA), Canada (Health Canada), and Saudi Arabia (SFDA).",
+      "primaryCta": "Book a Compliance Audit",
+      "secondaryCta": "Explore our services",
+      "stats": [
+        {
+          "value": "3",
+          "label": "Core markets"
+        },
+        {
+          "value": "GHAD",
+          "label": "AR hosting in Riyadh"
+        },
+        {
+          "value": "EN / AR",
+          "label": "Fully bilingual"
+        }
+      ]
+    },
+    "trust": {
+      "title": "Trusted across the world's most demanding regulatory ecosystems",
+      "items": [
+        "US FDA",
+        "Health Canada",
+        "Saudi SFDA / GHAD",
+        "ISO 13485",
+        "GCC GSO"
+      ]
+    },
+    "markets": {
+      "eyebrow": "Global Reach",
+      "title": "Focus Markets",
+      "subtitle": "Dedicated regulatory pathways across North America and the Gulf, built on local presence and deep authority relationships.",
+      "usa": {
+        "title": "United States",
+        "tag": "USA",
+        "points": [
+          "FDA Approvals & 510(k) Clearances",
+          "U.S. Agent Representation"
+        ]
+      },
+      "canada": {
+        "title": "Canada",
+        "tag": "Canada",
+        "points": [
+          "Health Canada Licensing",
+          "MDL & MDEL establishment"
+        ]
+      },
+      "saudi": {
+        "title": "Saudi Arabia",
+        "tag": "Core Market",
+        "points": [
+          "SFDA Authorized Representation",
+          "GHAD Portal Management"
+        ]
+      },
+      "gcc": {
+        "title": "GCC Region",
+        "tag": "UAE · Qatar · Kuwait · Bahrain · Oman",
+        "points": [
+          "Technical dossier submissions",
+          "Local portal management"
+        ]
+      }
+    },
+    "pathways": {
+      "eyebrow": "How we work",
+      "title": "Clear pathways, geographically structured",
+      "subtitle": "We separate our services by jurisdiction so you always know the exact scope, requirements and responsibilities in each market.",
+      "na": {
+        "title": "North America",
+        "desc": "FDA registrations, U.S. Agent representation, Health Canada MDL/MDEL and ISO 13485 alignment."
+      },
+      "saudi": {
+        "title": "Saudi Arabia (SFDA)",
+        "desc": "Legal Authorized Representative hosting and full GHAD lifecycle management for foreign manufacturers."
+      },
+      "gcc": {
+        "title": "Other GCC",
+        "desc": "Technical dossier compilation and local portal submission management across the Gulf."
+      }
+    },
+    "insightsPreview": {
+      "eyebrow": "Insights",
+      "title": "Knowledge from the regulatory front line",
+      "subtitle": "Practical guidance for manufacturers navigating global market access."
+    },
+    "ctaBand": {
+      "title": "Ready to accelerate your market access?",
+      "subtitle": "Begin with a confidential pre-diagnostic intake. Our team responds within 2 business days.",
+      "cta": "Book a Consultation"
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Regulatory pathways, by jurisdiction",
+      "subtitle": "This page is divided into clear, geographical pathways so manufacturers always understand the precise scope and our responsibilities in each market."
+    },
+    "tabs": {
+      "na": "North America",
+      "saudi": "Saudi Arabia (SFDA)",
+      "gcc": "Other GCC"
+    },
+    "na": {
+      "title": "North American Regulatory Pathways (USA & Canada)",
+      "subtitle": "End-to-end registration and representation across the United States and Canada.",
+      "items": [
+        "FDA Medical Device Registrations: 510(k) submissions and clearances",
+        "Official U.S. Agent Representation",
+        "Health Canada Medical Device Licenses (MDL) and Establishment Licenses (MDEL)",
+        "ISO 13485 Quality Management System (QMS) alignment",
+        "Cosmetics formulation compliance and labeling review"
+      ]
+    },
+    "saudi": {
+      "title": "Saudi Arabia (SFDA) · Core Market",
+      "subtitle": "On-the-ground authority relationships and full lifecycle management of the GHAD ecosystem.",
+      "items": [
+        "Legal Authorized Representative (AR) hosting for foreign manufacturers",
+        "Medical Device Marketing Authorization (MDMA) registrations via the GHAD portal",
+        "Cosmetics product notification and clearance"
+      ]
+    },
+    "gcc": {
+      "title": "Other GCC Countries (UAE, Qatar, Kuwait, Bahrain, Oman)",
+      "subtitle": "Technical submission services for the wider Gulf region.",
+      "items": [
+        "Technical dossier compilation and local portal submission management"
+      ],
+      "disclaimer": "For markets outside Saudi Arabia, we strictly provide technical submission services and do not offer local AR hosting or physical logistics capabilities."
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About & Team",
+      "title": "Cross-border expertise, built for regulatory credibility",
+      "subtitle": "Two specialised operating units give us authentic local presence on both sides of our core corridor: North America and Saudi Arabia."
+    },
+    "na": {
+      "title": "The North American Strategy Unit",
+      "location": "Based in Canada",
+      "desc": "Dedicated to managing global technical dossiers, QMS structures, and North American compliance frameworks. This unit translates documentation between FDA, Health Canada and international requirements, ensuring evidence is structured once and leveraged everywhere."
+    },
+    "saudi": {
+      "title": "The Saudi Operations Unit",
+      "location": "Based in Riyadh",
+      "desc": "Dedicated to direct liaison with the Saudi Food and Drug Authority (SFDA), navigating the GHAD ecosystem, and providing on-the-ground authorized representation. This unit holds the local establishment relationships required to host foreign manufacturers."
+    },
+    "values": {
+      "title": "What defines our practice",
+      "items": [
+        {
+          "title": "Clinical precision",
+          "desc": "Every dossier is assembled to the exact evidentiary standard of its target authority."
+        },
+        {
+          "title": "Cross-border fluency",
+          "desc": "We map approvals between jurisdictions so you never duplicate evidence-generation effort."
+        },
+        {
+          "title": "Confidential by design",
+          "desc": "Sensitive technical documents are handled with secure storage and strict access controls."
+        }
+      ]
+    }
+  },
+  "insights": {
+    "hero": {
+      "eyebrow": "Insights & Knowledge Hub",
+      "title": "Regulatory intelligence for global manufacturers",
+      "subtitle": "Practical, current guidance on the pathways that matter most for medical device and cosmetics market access."
+    },
+    "searchPlaceholder": "Search insights…",
+    "allCategories": "All categories",
+    "featured": "Featured",
+    "empty": "No articles match your search.",
+    "detail": {
+      "publishedOn": "Published"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact Us",
+      "title": "Pre-diagnostic Intake Form",
+      "subtitle": "Tell us about your product and target markets. This intake helps us prepare a precise, actionable response, typically within 2 business days."
+    },
+    "form": {
+      "title": "Send us your project",
+      "subtitle": "Tell us about your product and target markets. Attach a technical PDF if you have one, and we will get back to you with a clear next step.",
+      "company": "Company Name",
+      "companyPlaceholder": "Your company's legal name",
+      "email": "Work Email",
+      "emailPlaceholder": "name@company.com",
+      "phone": "Phone Number (optional)",
+      "phonePlaceholder": "+1 000 000 0000",
+      "productCategory": "Product Category",
+      "productCategoryPlaceholder": "Select a category",
+      "deviceClass": "Device Classification",
+      "deviceClassPlaceholder": "Select classification",
+      "markets": "Target Market(s)",
+      "message": "Message / Inquiry",
+      "messagePlaceholder": "Describe your product, current approvals, and what you need…",
+      "upload": "Technical Brochure / IFU (optional)",
+      "uploadHint": "Optionally attach a PDF (Technical Brochure or Instructions for Use) to expedite review. Max 20 MB.",
+      "uploadButton": "Choose PDF file",
+      "uploading": "Uploading…",
+      "uploaded": "Attached",
+      "removeFile": "Remove",
+      "consent": "I consent to HealthUnion Global storing and processing the information and any documents I submit for the purpose of responding to my inquiry, in accordance with applicable data protection laws (including GDPR, Saudi PDPL and Canada PIPEDA).",
+      "submit": "Submit Intake",
+      "submitting": "Submitting…",
+      "options": {
+        "medical_device": "Medical Device",
+        "cosmetics": "Cosmetics",
+        "class_i": "Class I",
+        "class_iia": "Class IIa",
+        "class_iib": "Class IIb",
+        "class_iii": "Class III",
+        "usa": "USA",
+        "canada": "Canada",
+        "saudi_arabia": "Saudi Arabia",
+        "other_gcc": "Other GCC"
+      },
+      "errors": {
+        "required": "This field is required.",
+        "consent": "You must provide consent to submit the form.",
+        "fileType": "Only PDF files are accepted.",
+        "fileSize": "File is too large (max 20 MB).",
+        "uploadFailed": "File upload failed. Please try again.",
+        "submitFailed": "Something went wrong. Please try again.",
+        "emailDeliveryFailed": "Your submission was saved, but the email notification could not be delivered. Please email info@healthunionglobal.com directly.",
+        "email": "Please enter a valid email address"
+      }
+    },
+    "success": {
+      "title": "Intake received",
+      "message": "Thank you. Our regulatory team will review your submission and respond within 2 business days.",
+      "again": "Submit another inquiry"
+    },
+    "sidebar": {
+      "title": "What happens next",
+      "steps": [
+        {
+          "title": "Confidential review",
+          "desc": "Your submission and any documents are reviewed securely by our regulatory specialists."
+        },
+        {
+          "title": "Pathway assessment",
+          "desc": "We map the optimal route to market for each target jurisdiction."
+        },
+        {
+          "title": "Response in 2 business days",
+          "desc": "You receive a clear, actionable next-step plan."
+        }
+      ],
+      "secureNote": "Documents are stored in encrypted object storage and accessed only through authenticated channels."
+    },
+    "stats": [
+      {
+        "value": "≤ 48h",
+        "label": "Typical response"
+      },
+      {
+        "value": "3",
+        "label": "Core markets"
+      },
+      {
+        "value": "100%",
+        "label": "Confidential"
+      },
+      {
+        "value": "20 MB",
+        "label": "Secure PDF upload"
+      }
+    ],
+    "info": {
+      "title": "Other ways to reach us",
+      "subtitle": "Pick the channel that suits you.",
+      "emailLabel": "Email",
+      "email": "info@healthunionglobal.com",
+      "phonesLabel": "WhatsApp",
+      "phones": [
+        {
+          "label": "Canada",
+          "display": "+1 905 965 1448",
+          "whatsapp": "19059651448"
+        },
+        {
+          "label": "Saudi Arabia",
+          "display": "+966 59 236 9636",
+          "whatsapp": "966592369636"
+        }
+      ],
+      "locationLabel": "Offices",
+      "location": "Canada and Riyadh, Saudi Arabia",
+      "privacyNote": "Your data is handled in line with our",
+      "privacyLink": "privacy notice"
+    },
+    "assurance": {
+      "title": "Reviewed by regulatory specialists",
+      "text": "Every submission is assessed by our FDA, Health Canada and SFDA specialists, with a clear next-step plan within 2 business days."
+    }
+  },
+  "footer": {
+    "tagline": "Bridging global manufacturers with the world's most stringent regulatory authorities.",
+    "explore": "Explore",
+    "markets": "Markets",
+    "marketsList": [
+      "United States (FDA)",
+      "Canada (Health Canada)",
+      "Saudi Arabia (SFDA)",
+      "GCC Region"
+    ],
+    "contact": "Get in touch",
+    "offices": "Offices in Canada and Riyadh, Saudi Arabia",
+    "disclaimer": "For markets outside Saudi Arabia, we provide technical submission services only and do not offer local AR hosting or physical logistics.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "cookie": {
+    "text": "We use essential cookies to operate this site and to securely store the information you submit through our forms. No advertising or third-party tracking.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "manage": "Cookie settings",
+    "privacy": "Privacy notice"
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Privacy & Data Protection",
+      "subtitle": "How HealthUnion Global collects, uses and protects the information you share with us."
+    },
+    "updated": "Last updated: 25 June 2026",
+    "intro": "This notice explains how HealthUnion Global handles personal data collected through this website, including the information and documents you submit through our intake and contact forms. We design our practices to align with the EU General Data Protection Regulation (GDPR), Canada's PIPEDA and Saudi Arabia's Personal Data Protection Law (PDPL).",
+    "sections": [
+      {
+        "title": "Who we are",
+        "body": [
+          "HealthUnion Global is a regulatory affairs consultancy supporting medical device and cosmetics manufacturers across the United States (FDA), Canada (Health Canada), Saudi Arabia (SFDA) and the wider GCC region.",
+          "We act as the data controller for the personal data collected through this website."
+        ]
+      },
+      {
+        "title": "Information we collect",
+        "body": [
+          "We only collect what we need to respond to your request and deliver our services:"
+        ],
+        "items": [
+          "Details you provide through our forms: company name, contact details, product category, device classification, target markets and your message.",
+          "Regulatory documents (PDF) that you choose to upload.",
+          "Your language preference and basic technical data required to operate the site securely.",
+          "We do not use advertising cookies or third-party tracking."
+        ]
+      },
+      {
+        "title": "How we use your information",
+        "body": [
+          "We use your data to respond to your enquiry and prepare a pre-diagnostic of your regulatory pathway, to provide and manage our consulting services, to communicate with you, and to meet our legal and regulatory obligations."
+        ]
+      },
+      {
+        "title": "Legal bases for processing",
+        "body": [
+          "Depending on your location, we rely on your consent, the performance of a contract or pre-contractual steps taken at your request, and our legitimate interest in responding to business enquiries.",
+          "Where the GDPR, PIPEDA or PDPL apply, we process your data in line with the rights and obligations they set out."
+        ]
+      },
+      {
+        "title": "Storage and security",
+        "body": [
+          "Form submissions are kept in a managed database. Documents you upload are stored in encrypted object storage and are served only through authenticated requests, never through public links.",
+          "Access is limited to authorised personnel, and we apply technical and organisational measures to protect your data."
+        ]
+      },
+      {
+        "title": "International transfers",
+        "body": [
+          "Because we operate across borders, with teams in Canada and Riyadh, your data may be processed in a country other than your own. When we transfer data internationally, we apply appropriate safeguards consistent with applicable law."
+        ]
+      },
+      {
+        "title": "Data retention",
+        "body": [
+          "We keep your personal data only for as long as necessary to respond to your request, deliver our services and meet our legal obligations. After that, we delete or anonymise it."
+        ]
+      },
+      {
+        "title": "Sharing your information",
+        "body": [
+          "We do not sell your data and we do not share it for advertising. We may share it with trusted service providers who help us operate this site (for example hosting and email delivery) under appropriate confidentiality commitments, and with authorities where the law requires it."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "Subject to applicable law, you may request access to your data, as well as its correction, deletion, restriction or portability, and you may object to certain processing. You may also withdraw consent at any time."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "body": [
+          "We use only essential cookies needed to operate the site and to remember your language and cookie preferences. We do not run advertising or analytics tracking at this time; if we introduce analytics in the future, we will ask for your consent first."
+        ]
+      },
+      {
+        "title": "Changes to this notice",
+        "body": [
+          "We may update this notice from time to time. The \"last updated\" date above reflects the most recent version."
+        ]
+      }
+    ],
+    "requestTitle": "Questions or data requests",
+    "requestBody": "For any question about this notice, or to exercise your rights, contact us through our contact page or by email. We respond to legitimate requests in line with applicable law.",
+    "email": "info@healthunionglobal.com"
+  }
+}
