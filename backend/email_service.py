@@ -83,6 +83,7 @@ def _build_email_html(submission: dict, has_attachment: bool = False) -> str:
       <tr><td><b>Product Category</b></td><td>{_esc(submission.get('product_category'))}</td></tr>
       <tr><td><b>Device Classification</b></td><td>{_esc(submission.get('device_classification')) or 'n/a'}</td></tr>
       <tr><td><b>Target Markets</b></td><td>{_esc(markets)}</td></tr>
+      <tr><td><b>Service Interest</b></td><td>{_esc(submission.get('service_interest')) or 'general inquiry'}</td></tr>
       <tr><td><b>PDF document</b></td><td>{attached}</td></tr>
       <tr><td><b>Language</b></td><td>{_esc(submission.get('locale', 'en'))}</td></tr>
       <tr><td><b>Received</b></td><td>{_esc(submission.get('created_at'))}</td></tr>
@@ -101,6 +102,7 @@ def _build_text(submission: dict) -> str:
         f"Product Category: {submission.get('product_category','')}\n"
         f"Device Classification: {submission.get('device_classification','') or 'n/a'}\n"
         f"Target Markets: {markets}\n"
+        f"Service Interest: {submission.get('service_interest','') or 'general inquiry'}\n"
         f"Language: {submission.get('locale','en')}\n"
         f"Received: {submission.get('created_at','')}\n\n"
         f"Message:\n{submission.get('message','')}\n"
