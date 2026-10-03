@@ -21,9 +21,17 @@
       "title": "Contact · HealthUnion Global",
       "description": "Start your pre-diagnostic intake and book a compliance audit with HealthUnion Global."
     },
+    "sfdaMdma": {
+      "title": "SFDA Medical Device Registration & MDMA Services in Saudi Arabia · HealthUnion Global",
+      "description": "SFDA medical device registration and MDMA support for manufacturers entering Saudi Arabia, including pathway scoping, technical-file readiness and GHAD lifecycle support."
+    },
     "privacy": {
       "title": "Privacy & Data Protection · HealthUnion Global",
       "description": "How HealthUnion Global collects, uses and protects personal data, aligned with GDPR, PIPEDA and Saudi PDPL."
+    },
+    "terms": {
+      "title": "Terms of Website Use · HealthUnion Global",
+      "description": "Terms that apply to use of the HealthUnion Global website and its general information."
     }
   },
   "nav": {
@@ -33,7 +41,7 @@
     "about": "About & Team",
     "insights": "Insights",
     "contact": "Contact Us",
-    "cta": "Book a Consultation",
+    "cta": "Request a Regulatory Pathway Assessment",
     "mega": {
       "label": "Regulatory services by market",
       "viewAll": "View all services",
@@ -100,12 +108,12 @@
       "eyebrow": "International Regulatory Affairs & Compliance",
       "headline": "Global Regulatory Compliance. Accelerated Market Access.",
       "subheadline": "We bridge innovative medical device and cosmetics manufacturers with the world's most stringent regulatory authorities: USA (FDA), Canada (Health Canada), and Saudi Arabia (SFDA).",
-      "primaryCta": "Book a Compliance Audit",
+      "primaryCta": "Request a Regulatory Pathway Assessment",
       "secondaryCta": "Explore our services",
       "stats": [
         {
           "value": "3",
-          "label": "Core markets"
+          "label": "Market pathways: North America, Saudi Arabia & GCC"
         },
         {
           "value": "GHAD",
@@ -130,7 +138,7 @@
     "markets": {
       "eyebrow": "Global Reach",
       "title": "Focus Markets",
-      "subtitle": "Dedicated regulatory pathways across North America and the Gulf, built on local presence and deep authority relationships.",
+      "subtitle": "Our three market pathways cover North America (USA and Canada), Saudi Arabia, and the wider GCC.",
       "usa": {
         "title": "United States",
         "tag": "USA",
@@ -189,7 +197,7 @@
     "ctaBand": {
       "title": "Ready to accelerate your market access?",
       "subtitle": "Begin with a confidential pre-diagnostic intake. Our team responds within 2 business days.",
-      "cta": "Book a Consultation"
+      "cta": "Request a Regulatory Pathway Assessment"
     }
   },
   "services": {
@@ -202,6 +210,33 @@
       "na": "North America",
       "saudi": "Saudi Arabia (SFDA)",
       "gcc": "Other GCC"
+    },
+    "overview": {
+      "eyebrow": "Choose the right pathway",
+      "title": "Compare the scope before you start",
+      "subtitle": "Each pathway has a different regulatory context, deliverable set and next step. Start with the route that matches your intended market.",
+      "items": [
+        {
+          "title": "North America",
+          "for": "For manufacturers entering the USA or Canada",
+          "deliverables": "FDA, Health Canada and technical-file support",
+          "cta": "Request a pathway assessment"
+        },
+        {
+          "title": "Saudi Arabia (SFDA)",
+          "for": "For medical-device manufacturers entering Saudi Arabia",
+          "deliverables": "MDMA readiness, technical-file review and GHAD support",
+          "cta": "Explore the Saudi pathway"
+        },
+        {
+          "title": "Other GCC",
+          "for": "For manufacturers preparing wider Gulf submissions",
+          "deliverables": "Technical-dossier preparation and portal support",
+          "cta": "Request a pathway assessment"
+        }
+      ],
+      "forLabel": "Who it is for",
+      "deliverablesLabel": "Typical support"
     },
     "na": {
       "title": "North American Regulatory Pathways (USA & Canada)",
@@ -223,6 +258,7 @@
         "Cosmetics product notification and clearance"
       ]
     },
+    "sfdaMdmaLink": "Explore SFDA Medical Device Registration & MDMA Services",
     "gcc": {
       "title": "Other GCC Countries (UAE, Qatar, Kuwait, Bahrain, Oman)",
       "subtitle": "Technical submission services for the wider Gulf region.",
@@ -230,6 +266,118 @@
         "Technical dossier compilation and local portal submission management"
       ],
       "disclaimer": "For markets outside Saudi Arabia, we strictly provide technical submission services and do not offer local AR hosting or physical logistics capabilities."
+    }
+  },
+  "sfdaMdma": {
+    "servicesLink": "Explore SFDA Medical Device Registration & MDMA Services",
+    "hero": {
+      "eyebrow": "Saudi Arabia (SFDA) · Medical Devices",
+      "title": "SFDA Medical Device Registration & MDMA Services in Saudi Arabia",
+      "subtitle": "Plan, prepare and manage your Saudi market-entry pathway with focused support for MDMA readiness, technical documentation and GHAD lifecycle requirements.",
+      "primaryCta": "Request a Regulatory Pathway Assessment",
+      "whatsappCta": "Talk to our Saudi team on WhatsApp",
+      "proof": [
+        "Saudi-focused support",
+        "Riyadh and Canada offices",
+        "English and Arabic service"
+      ]
+    },
+    "audience": {
+      "eyebrow": "Built for manufacturers",
+      "title": "A clearer starting point for Saudi market access",
+      "body": "Whether you are planning a first entry, assessing an existing dossier, or preparing a new device variant, we help organise the regulatory work before the submission stage.",
+      "items": [
+        {
+          "title": "New to Saudi Arabia",
+          "text": "Understand the initial pathway, local coordination requirements and the information that should be assembled first."
+        },
+        {
+          "title": "Working from existing approvals",
+          "text": "Review how your current technical documentation can be assessed against the Saudi submission path."
+        },
+        {
+          "title": "Managing a product change",
+          "text": "Clarify the documentation and planning questions to address before progressing a change or renewal."
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "MDMA and GHAD support",
+      "title": "Where we can support your submission programme",
+      "subtitle": "The exact path depends on your product and its classification. We scope the work against your current evidence, the intended Saudi pathway and the practical steps required to proceed.",
+      "items": [
+        {
+          "title": "Pathway scoping",
+          "text": "Clarify the product, intended use, classification context and key regulatory questions for Saudi market entry."
+        },
+        {
+          "title": "Technical-file gap assessment",
+          "text": "Review available technical documentation and identify the information that needs attention before submission preparation."
+        },
+        {
+          "title": "Authorised Representative coordination",
+          "text": "Coordinate the local representation and manufacturer documentation needed for the selected pathway."
+        },
+        {
+          "title": "MDMA and GHAD preparation",
+          "text": "Prepare and organise the submission package and support the required portal workflow."
+        },
+        {
+          "title": "Lifecycle planning",
+          "text": "Plan for updates, renewals and post-market obligations that may apply after market access."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "A practical first review",
+      "title": "What an MDMA readiness assessment covers",
+      "subtitle": "Our initial review is designed to create an actionable next-step plan, not to promise an outcome before the product and evidence are understood.",
+      "items": [
+        {
+          "title": "Product and market context",
+          "text": "We review the device, intended use, manufacturer status and commercial objective in Saudi Arabia."
+        },
+        {
+          "title": "Existing evidence",
+          "text": "We identify the approvals, quality-system information, clinical or performance evidence and technical-file materials already available."
+        },
+        {
+          "title": "Submission-readiness gaps",
+          "text": "We map priority information and documentation questions to resolve before the MDMA preparation stage."
+        },
+        {
+          "title": "Recommended next steps",
+          "text": "You receive a structured view of the likely workstreams, dependencies and questions to confirm with the relevant stakeholders."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "Common questions before beginning",
+      "items": [
+        {
+          "question": "What is an MDMA?",
+          "answer": "MDMA refers to Medical Device Marketing Authorization. The applicable route and documentation depend on the device and its regulatory context."
+        },
+        {
+          "question": "Do foreign manufacturers need local representation?",
+          "answer": "Local representation requirements and responsibilities need to be assessed for the manufacturer and selected pathway. We can help clarify the practical coordination required."
+        },
+        {
+          "question": "Can existing FDA, Health Canada or CE documentation be used?",
+          "answer": "Existing evidence can inform the assessment, but it should be reviewed against the Saudi pathway and current product documentation before assumptions are made."
+        },
+        {
+          "question": "When should we start?",
+          "answer": "Start before a commercial launch date is fixed. An early readiness review helps surface documentation dependencies and local coordination needs in time."
+        }
+      ]
+    },
+    "disclaimer": "This page provides general information, not legal or regulatory advice. SFDA requirements, classifications, timelines and evidence expectations must be confirmed for the specific device and submission route.",
+    "finalCta": {
+      "title": "Ready to clarify your Saudi pathway?",
+      "text": "Share the basics of your device and current approvals. We will review the request and respond with a clear next step.",
+      "button": "Request a Regulatory Pathway Assessment"
     }
   },
   "about": {
@@ -283,12 +431,14 @@
   "contact": {
     "hero": {
       "eyebrow": "Contact Us",
-      "title": "Pre-diagnostic Intake Form",
-      "subtitle": "Tell us about your product and target markets. This intake helps us prepare a precise, actionable response, typically within 2 business days."
+      "title": "Request a Regulatory Pathway Assessment",
+      "subtitle": "Choose a quick enquiry or share project details for a more detailed pathway assessment. We typically respond within 2 business days."
     },
     "form": {
-      "title": "Send us your project",
+      "title": "Detailed project intake",
       "subtitle": "Tell us about your product and target markets. Attach a technical PDF if you have one, and we will get back to you with a clear next step.",
+      "sfdaMdmaContext": "You are requesting support for SFDA Medical Device Registration & MDMA Services in Saudi Arabia. Saudi Arabia has been selected below so we can route your enquiry correctly.",
+      "sfdaMdmaMessage": "I am interested in SFDA Medical Device Registration & MDMA Services in Saudi Arabia. Please contact me about an MDMA readiness assessment.",
       "company": "Company Name",
       "companyPlaceholder": "Your company's legal name",
       "email": "Work Email",
@@ -335,12 +485,12 @@
       }
     },
     "success": {
-      "title": "Intake received",
+      "title": "Assessment request received",
       "message": "Thank you. Our regulatory team will review your submission and respond within 2 business days.",
       "again": "Submit another inquiry"
     },
     "sidebar": {
-      "title": "What happens next",
+      "title": "What happens after your request",
       "steps": [
         {
           "title": "Confidential review",
@@ -364,7 +514,7 @@
       },
       {
         "value": "3",
-        "label": "Core markets"
+        "label": "Market pathways"
       },
       {
         "value": "100%",
@@ -401,6 +551,16 @@
     "assurance": {
       "title": "Reviewed by regulatory specialists",
       "text": "Every submission is assessed by our FDA, Health Canada and SFDA specialists, with a clear next-step plan within 2 business days."
+    },
+    "quick": {
+      "eyebrow": "Prefer a lighter first step?",
+      "title": "Start with a quick enquiry",
+      "text": "Email or message our team with the basics. Use the detailed intake below when you are ready to share product and document information.",
+      "email": "Email a quick enquiry",
+      "whatsapp": "Message the Saudi team on WhatsApp",
+      "ndaTitle": "Need an NDA before sharing documents?",
+      "ndaText": "Contact us to request an NDA before uploading technical material.",
+      "ndaCta": "Request an NDA"
     }
   },
   "footer": {
@@ -408,12 +568,11 @@
     "explore": "Explore",
     "markets": "Markets",
     "marketsList": [
-      "United States (FDA)",
-      "Canada (Health Canada)",
+      "North America (USA & Canada)",
       "Saudi Arabia (SFDA)",
       "GCC Region"
     ],
-    "contact": "Get in touch",
+    "contact": "Request a Regulatory Pathway Assessment",
     "offices": "Offices in Canada and Riyadh, Saudi Arabia",
     "disclaimer": "For markets outside Saudi Arabia, we provide technical submission services only and do not offer local AR hosting or physical logistics.",
     "rights": "All rights reserved.",
@@ -516,5 +675,46 @@
     "requestTitle": "Questions or data requests",
     "requestBody": "For any question about this notice, or to exercise your rights, contact us through our contact page or by email. We respond to legitimate requests in line with applicable law.",
     "email": "info@healthunionglobal.com"
+  },
+  "termsPage": {
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Terms of Website Use",
+      "subtitle": "The terms that apply when you use this website and its general information."
+    },
+    "intro": "Please read these terms together with our Privacy Notice before using this website or sending us information through it.",
+    "sections": [
+      {
+        "title": "Information on this website",
+        "body": [
+          "The material on this website is provided for general information about HealthUnion Global and its services. We aim to keep it useful and current, but regulatory requirements, guidance and market conditions can change."
+        ]
+      },
+      {
+        "title": "No regulatory or legal advice",
+        "body": [
+          "Website content does not constitute legal, regulatory, clinical or other professional advice. A device-specific assessment requires review of the product, evidence and intended market."
+        ]
+      },
+      {
+        "title": "Professional services",
+        "body": [
+          "Any professional services are subject to a separate written agreement that defines the scope, responsibilities, fees, confidentiality and other applicable terms."
+        ]
+      },
+      {
+        "title": "Acceptable use",
+        "body": [
+          "Do not interfere with the operation or security of this website, attempt unauthorised access, or use the website in a way that is unlawful or harms others."
+        ]
+      },
+      {
+        "title": "Third-party links",
+        "body": [
+          "This website may link to third-party websites or resources. Those sites are governed by their own terms and privacy practices, and HealthUnion Global is not responsible for their content."
+        ]
+      }
+    ],
+    "contact": "Questions about these terms can be sent to info@healthunionglobal.com."
   }
 }

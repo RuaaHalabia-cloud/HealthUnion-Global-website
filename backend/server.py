@@ -50,6 +50,7 @@ class ContactSubmissionCreate(BaseModel):
     message: str
     consent: bool = False
     locale: str = "en"
+    service_interest: Optional[str] = ""
     file_id: Optional[str] = None
     # honeypot anti-spam field, must remain empty for genuine users
     website: Optional[str] = ""

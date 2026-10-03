@@ -172,10 +172,13 @@ export default function Header() {
                               </div>
                               {(g.items || []).map((it, i) => {
                                 const Icon = icons[i] || Globe;
+                                const destination = g.key === "saudi"
+                                  ? `${base}/sfda-medical-device-registration-mdma`
+                                  : `${base}/services`;
                                 return (
                                   <Link
                                     key={it.title}
-                                    to={`${base}/services`}
+                                    to={destination}
                                     data-testid="header-mega-item"
                                     className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-[#F8FAFC]"
                                   >
@@ -288,7 +291,7 @@ export default function Header() {
                       (g.items || []).map((it) => (
                         <SheetClose asChild key={it.title}>
                           <Link
-                            to={`${base}/services`}
+                            to={g.key === "saudi" ? `${base}/sfda-medical-device-registration-mdma` : `${base}/services`}
                             className="rounded-md px-2 py-2 text-sm text-white/65 hover:bg-white/5 hover:text-white"
                           >
                             {it.title}

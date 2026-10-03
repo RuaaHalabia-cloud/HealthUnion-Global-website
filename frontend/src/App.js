@@ -9,6 +9,8 @@ import Insights from "@/pages/Insights";
 import InsightDetail from "@/pages/InsightDetail";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
+import SfdaMdma from "@/pages/SfdaMdma";
+import Terms from "@/pages/Terms";
 import { Toaster } from "@/components/ui/sonner";
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
           <Route path="insights" element={<Insights />} />
           <Route path="insights/:slug" element={<InsightDetail />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="sfda-medical-device-registration-mdma" element={<SfdaMdma />} />
           <Route path="privacy" element={<Privacy />} />
+          <Route path="terms" element={<Terms />} />
         </Route>
         <Route path="*" element={<Navigate to={`/${defaultLang}`} replace />} />
       </Routes>
