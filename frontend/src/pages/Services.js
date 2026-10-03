@@ -11,7 +11,7 @@ import useSeo from "@/hooks/useSeo";
 const SERVICE_IMG =
   "https://images.pexels.com/photos/9574395/pexels-photo-9574395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
-function PathwayBlock({ k, t, showDisclaimer = false, image }) {
+function PathwayBlock({ k, t, showDisclaimer = false, image, detailsLink, detailsLabel }) {
   const items = t(`services.${k}.items`, { returnObjects: true }) || [];
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
@@ -44,6 +44,15 @@ function PathwayBlock({ k, t, showDisclaimer = false, image }) {
             </AlertDescription>
           </Alert>
         )}
+        {detailsLink && (
+          <Link
+            to={detailsLink}
+            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E3A8A] transition-colors hover:text-[#0D9488]"
+          >
+            {detailsLabel}
+            <ArrowRight className="h-4 w-4 rtl-flip" />
+          </Link>
+        )}
       </div>
       <div className="lg:col-span-5">
         <div className="overflow-hidden rounded-xl border border-[#1E3A8A]/10 shadow-[var(--hu-shadow-md)]">
@@ -59,6 +68,8 @@ export default function Services() {
   const { lang } = useParams();
   const { t } = useTranslation();
   const base = `/${lang}`;
+  const overview = t("services.overview", { returnObjects: true }) || {};
+  const overviewItems = Array.isArray(overview.items) ? overview.items : [];
 
   return (
     <div>
@@ -68,9 +79,48 @@ export default function Services() {
         subtitle={t("services.hero.subtitle")}
       />
 
+      <section className="border-b border-[#1E3A8A]/10 bg-white py-12 sm:py-14">
+        <div className="hu-container">
+          <Reveal className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#0D9488]">{overview.eyebrow}</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#0A2240]">{overview.title}</h2>
+            <p className="mt-3 text-base leading-relaxed text-[#0A2240]/70">{overview.subtitle}</p>
+          </Reveal>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            {overviewItems.map((item, index) => {
+              const isSaudi = index === 1;
+              const destination = isSaudi
+                ? `${base}/sfda-medical-device-registration-mdma`
+                : `${base}/contact`;
+              return (
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <div className="flex h-full flex-col rounded-2xl border border-[#1E3A8A]/10 bg-[#F8FAFC] p-6">
+                    <h3 className="text-lg font-bold text-[#0A2240]">{item.title}</h3>
+                    <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#0A2240]/70">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-[#0A2240]/45">{overview.forLabel}</p>
+                        <p className="mt-1">{item.for}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-[#0A2240]/45">{overview.deliverablesLabel}</p>
+                        <p className="mt-1">{item.deliverables}</p>
+                      </div>
+                    </div>
+                    <Link to={destination} className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E3A8A] transition-colors hover:text-[#0D9488]">
+                      {item.cta}
+                      <ArrowRight className="h-4 w-4 rtl-flip" />
+                    </Link>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       <section className="hu-section bg-[#F8FAFC]">
         <div className="hu-container">
-          <Tabs defaultValue="na" className="w-full">
+          <Tabs defaultValue="saudi" className="w-full">
             <TabsList className="flex flex-wrap h-auto bg-white border border-[#1E3A8A]/10 p-1.5 rounded-xl gap-1">
               <TabsTrigger value="na" data-testid="services-tab-na" className="rounded-lg data-[state=active]:bg-[#0A2240] data-[state=active]:text-white px-4 py-2 text-sm font-medium">
                 {t("services.tabs.na")}
@@ -91,6 +141,8 @@ export default function Services() {
                 <PathwayBlock
                   k="saudi"
                   t={t}
+                  detailsLink={`${base}/sfda-medical-device-registration-mdma`}
+                  detailsLabel={t("sfdaMdma.servicesLink")}
                   image="https://images.pexels.com/photos/13891122/pexels-photo-13891122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 />
               </Reveal>
