@@ -11,7 +11,7 @@ import useSeo from "@/hooks/useSeo";
 const SERVICE_IMG =
   "https://images.pexels.com/photos/9574395/pexels-photo-9574395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
-function PathwayBlock({ k, t, showDisclaimer = false, image, detailsLink, detailsLabel }) {
+function PathwayBlock({ k, t, showDisclaimer = false, image, detailsLinks = [] }) {
   const items = t(`services.${k}.items`, { returnObjects: true }) || [];
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
@@ -44,14 +44,19 @@ function PathwayBlock({ k, t, showDisclaimer = false, image, detailsLink, detail
             </AlertDescription>
           </Alert>
         )}
-        {detailsLink && (
-          <Link
-            to={detailsLink}
-            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E3A8A] transition-colors hover:text-[#0D9488]"
-          >
-            {detailsLabel}
-            <ArrowRight className="h-4 w-4 rtl-flip" />
-          </Link>
+        {detailsLinks.length > 0 && (
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-6">
+            {detailsLinks.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#1E3A8A] transition-colors hover:text-[#0D9488]"
+              >
+                {item.label}
+                <ArrowRight className="h-4 w-4 rtl-flip" />
+              </Link>
+            ))}
+          </div>
         )}
       </div>
       <div className="lg:col-span-5">
@@ -141,8 +146,12 @@ export default function Services() {
                 <PathwayBlock
                   k="saudi"
                   t={t}
-                  detailsLink={`${base}/sfda-medical-device-registration-mdma`}
-                  detailsLabel={t("sfdaMdma.servicesLink")}
+                  detailsLinks={[
+                    { to: `${base}/sfda-medical-device-registration-mdma`, label: t("sfdaMdma.servicesLink") },
+                    { to: `${base}/sfda-mds-g30-reliance-assessment`, label: t("sfdaReliance.servicesLink") },
+                    { to: `${base}/sfda-technical-file-gap-assessment`, label: t("sfdaTechnicalFile.servicesLink") },
+                    { to: `${base}/saudi-medical-device-distributor-regulatory-support`, label: t("sfdaDistributorSupport.servicesLink") },
+                  ]}
                   image="https://images.pexels.com/photos/13891122/pexels-photo-13891122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                 />
               </Reveal>

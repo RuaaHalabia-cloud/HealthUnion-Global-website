@@ -111,7 +111,7 @@ export default function Insights() {
                   >
                     <article className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl bg-white border border-[#1E3A8A]/10 shadow-[var(--hu-shadow-sm)] hover:shadow-[var(--hu-shadow-md)] transition-shadow">
                       <div className="aspect-[16/10] lg:aspect-auto overflow-hidden">
-                        <img src={featured.image} alt={featured.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <img src={featured.image} alt={featured.image_alt || featured.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       </div>
                       <div className="p-7 lg:p-10 flex flex-col justify-center">
                         <div className="flex items-center gap-2">
@@ -148,7 +148,7 @@ export default function Insights() {
                     <Link to={`${base}/insights/${post.slug}`} data-testid="blog-card" className="group block h-full">
                       <article className="h-full overflow-hidden rounded-xl bg-white border border-[#1E3A8A]/10 shadow-[var(--hu-shadow-sm)] hover:shadow-[var(--hu-shadow-md)] hover:-translate-y-0.5 transition-[transform,box-shadow]">
                         <div className="aspect-[16/10] overflow-hidden">
-                          <img src={post.image} alt={post.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                          <img src={post.image} alt={post.image_alt || post.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                         </div>
                         <div className="p-6">
                           <Badge variant="outline" className="border-[#1E3A8A]/30 text-[#1E3A8A]">{post.category}</Badge>
