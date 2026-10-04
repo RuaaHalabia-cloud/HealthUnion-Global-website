@@ -29,9 +29,50 @@ automatiquement renseigné avec l'adresse du client.
 | Variable | Valeur |
 |---|---|
 | `REACT_APP_BACKEND_URL` | URL publique du service backend, sans slash final |
+| `REACT_APP_GTM_ID` | ID du conteneur Google Tag Manager (ex. `GTM-XXXXXXX`), facultatif |
 
 À définir avant le build : Create React App fige les variables au moment de la
-compilation. Après changement, relancer un déploiement.
+compilation. Après changement, relancer un déploiement. Le conteneur GTM ne se
+charge que si son ID est défini **et** si le visiteur accepte la mesure
+facultative dans la bannière de cookies.
+
+## 2 ter. Mesure Google — configuration avant activation
+
+Créer un seul conteneur Web Google Tag Manager, puis renseigner son ID dans
+`REACT_APP_GTM_ID` avant le build du frontend. Ne pas placer directement un ID
+Google Analytics ou une étiquette Google Ads dans le code : ces éléments sont
+gérés dans GTM et restent donc auditables au même endroit.
+
+Dans GTM, configurer et tester en mode Preview :
+
+1. l'étiquette Google Analytics 4 sur toutes les pages après consentement ;
+2. une conversion `generate_lead` à partir de l'événement data layer du même
+   nom ;
+3. l'étiquette Google Ads correspondante uniquement lorsque le compte Google
+   Ads et son action de conversion sont prêts ;
+4. un Conversion Linker, avec les paramètres de consentement adaptés avant de
+   publier le conteneur.
+
+Événements disponibles, sans donnée personnelle :
+
+| Événement | Moment | Rôle recommandé |
+|---|---|---|
+| `generate_lead` | envoi réussi du formulaire | conversion principale GA4 et Google Ads |
+| `whatsapp_click` | clic WhatsApp | signal secondaire, à qualifier avant de le compter comme conversion Ads |
+| `email_click` | clic email | signal secondaire |
+| `ksa_*_cta_click` | clic CTA d'une page KSA | mesure d'intérêt, pas une conversion Ads principale |
+
+Ne pas définir un clic WhatsApp ou email comme conversion Google Ads principale
+au départ : il ne confirme pas qu'une demande a été reçue. Aucun événement
+`phone_click` n'est créé tant que le site n'offre pas de liens `tel:`. Aucun
+événement `booked_meeting` n'est créé tant qu'un outil de réservation n'affiche
+pas une confirmation réelle ; un simple clic vers une page de réservation ne
+doit être mesuré que comme `book_meeting_click`.
+
+Pour Google Search Console, vérifier de préférence le domaine par DNS dans le
+compte propriétaire, puis soumettre le sitemap une fois le domaine public
+accessible. Vérifier enfin dans GA4 DebugView et GTM Preview qu'aucune donnée
+personnelle, document ou message de formulaire ne part vers Google.
 
 ## 2 bis. Déploiement Railway
 
