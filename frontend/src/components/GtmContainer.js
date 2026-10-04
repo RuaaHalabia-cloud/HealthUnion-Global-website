@@ -5,20 +5,9 @@ const GTM_ID = String(process.env.REACT_APP_GTM_ID || "").trim();
 const isValidContainerId = /^GTM-[A-Z0-9]+$/i.test(GTM_ID);
 
 function loadContainerAfterConsent() {
-  const hasLegacyTrackingConsent = (() => {
-    try {
-      return (
-        localStorage.getItem("hu_cookie_consent_v2") === "accepted" ||
-        localStorage.getItem("hu_cookie_consent") === "accepted"
-      );
-    } catch (e) {
-      return false;
-    }
-  })();
-
   if (
     !isValidContainerId ||
-    (!hasTrackingConsent() && !hasLegacyTrackingConsent) ||
+    !hasTrackingConsent() ||
     document.getElementById("hu-gtm-container")
   ) {
     return;
