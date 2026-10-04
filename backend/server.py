@@ -73,6 +73,7 @@ def localized_posts(lang: str):
             "slug": p["slug"],
             "category": p["category"],
             "image": p["image"],
+            "image_alt": loc.get("image_alt", loc["title"]),
             "featured": p["featured"],
             "date": p["date"],
             "reading_time": p["reading_time"],

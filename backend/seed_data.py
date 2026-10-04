@@ -5,12 +5,13 @@ BLOG_POSTS = [
         "id": "post-sfda-ghad-guide",
         "slug": "navigating-sfda-ghad-portal",
         "category": "Saudi Arabia (SFDA)",
-        "image": "https://images.pexels.com/photos/9574395/pexels-photo-9574395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "image": "/images/illustrative/insights/ghad-workflow.png",
         "featured": True,
         "date": "2026-01-15",
         "reading_time": 8,
         "en": {
             "title": "Navigating the SFDA GHAD Portal: A Comprehensive Guide for Manufacturers",
+            "image_alt": "Illustrative Saudi regulatory workflow; no actual portal or client submission is shown",
             "excerpt": "A step-by-step walkthrough of the Saudi Food and Drug Authority's GHAD ecosystem, from Authorized Representative appointment to Medical Device Marketing Authorization.",
             "body": [
                 "The Saudi Food and Drug Authority (SFDA) has consolidated its medical device registration workflow into the GHAD portal, the single digital gateway through which foreign manufacturers reach the Kingdom's market. For manufacturers accustomed to FDA or Health Canada pathways, GHAD introduces a distinct sequence of obligations that hinge on a legally appointed Authorized Representative (AR) established inside Saudi Arabia.",
@@ -23,6 +24,7 @@ BLOG_POSTS = [
         },
         "ar": {
             "title": "التنقل في بوابة غاد التابعة للهيئة العامة للغذاء والدواء: دليل شامل للمصنعين",
+            "image_alt": "سير عمل تنظيمي سعودي توضيحي؛ لا يعرض بوابة فعلية أو تقديمًا خاصًا بعميل",
             "excerpt": "شرح تفصيلي خطوة بخطوة لمنظومة غاد التابعة للهيئة السعودية للغذاء والدواء، من تعيين الممثل المعتمد إلى الحصول على إذن تسويق الأجهزة الطبية.",
             "body": [
                 "وحّدت الهيئة العامة للغذاء والدواء (SFDA) إجراءات تسجيل الأجهزة الطبية ضمن بوابة غاد، وهي البوابة الرقمية الموحدة التي يصل من خلالها المصنعون الأجانب إلى السوق السعودية. وبالنسبة للمصنعين المعتادين على مسارات إدارة الغذاء والدواء الأمريكية أو هيئة الصحة الكندية، تقدم غاد سلسلة مميزة من الالتزامات ترتكز على ممثل معتمد معيّن قانونيًا داخل المملكة.",
@@ -38,12 +40,13 @@ BLOG_POSTS = [
         "id": "post-510k-vs-ce",
         "slug": "fda-510k-vs-ce-mark",
         "category": "North America",
-        "image": "https://images.pexels.com/photos/13891122/pexels-photo-13891122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "image": "/images/illustrative/insights/510k-ce-comparison.png",
         "featured": False,
         "date": "2026-01-08",
         "reading_time": 6,
         "en": {
             "title": "FDA 510(k) vs. CE Mark: Bridging the Transatlantic Gap",
+            "image_alt": "Illustrative regulatory evidence comparison; no actual submission materials are shown",
             "excerpt": "Understanding the philosophical and procedural differences between U.S. substantial equivalence and European conformity assessment, and how to leverage one for the other.",
             "body": [
                 "Manufacturers expanding across the Atlantic frequently assume that an approval in one jurisdiction translates directly to the other. In reality, the FDA 510(k) and the European CE marking rest on fundamentally different regulatory philosophies.",
@@ -55,6 +58,7 @@ BLOG_POSTS = [
         },
         "ar": {
             "title": "إدارة الغذاء والدواء 510(k) مقابل علامة CE: سد الفجوة عبر الأطلسي",
+            "image_alt": "مقارنة توضيحية للأدلة التنظيمية؛ لا تعرض مواد تقديم فعلية",
             "excerpt": "فهم الاختلافات الفلسفية والإجرائية بين مفهوم التكافؤ الجوهري الأمريكي وتقييم المطابقة الأوروبي، وكيفية الاستفادة من أحدهما للآخر.",
             "body": [
                 "كثيرًا ما يفترض المصنعون الذين يتوسعون عبر الأطلسي أن الموافقة في ولاية قضائية واحدة تنتقل مباشرة إلى الأخرى. في الواقع، يرتكز مسار 510(k) الأمريكي وعلامة CE الأوروبية على فلسفات تنظيمية مختلفة جوهريًا.",
@@ -69,12 +73,13 @@ BLOG_POSTS = [
         "id": "post-gcc-cosmetics-2026",
         "slug": "gcc-cosmetics-compliance-2026",
         "category": "Cosmetics",
-        "image": "https://images.pexels.com/photos/36339062/pexels-photo-36339062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "image": "/images/illustrative/insights/gcc-cosmetics-review.png",
         "featured": False,
         "date": "2026-01-02",
         "reading_time": 5,
         "en": {
             "title": "GCC Cosmetics Compliance Standards for 2026",
+            "image_alt": "Illustrative cosmetics compliance review; no actual formulation or client documents are shown",
             "excerpt": "What cosmetics brands need to know about notification, labelling and ingredient restrictions across the Gulf Cooperation Council markets in the year ahead.",
             "body": [
                 "The Gulf Cooperation Council continues to harmonise its cosmetics regulations under the GSO technical framework, but national implementation still varies in meaningful ways for 2026. Brands entering Saudi Arabia, the UAE, Qatar, Kuwait, Bahrain and Oman must plan for both shared and country-specific requirements.",
@@ -86,6 +91,7 @@ BLOG_POSTS = [
         },
         "ar": {
             "title": "معايير الامتثال لمستحضرات التجميل في دول الخليج لعام 2026",
+            "image_alt": "مراجعة توضيحية لامتثال مستحضرات التجميل؛ لا تعرض تركيبة فعلية أو مستندات عميل",
             "excerpt": "ما تحتاج علامات مستحضرات التجميل إلى معرفته حول الإشعار والبطاقات التعريفية وقيود المكونات عبر أسواق مجلس التعاون الخليجي في العام المقبل.",
             "body": [
                 "يواصل مجلس التعاون الخليجي مواءمة لوائح مستحضرات التجميل ضمن الإطار الفني لهيئة التقييس الخليجية، لكن التطبيق الوطني لا يزال يتفاوت بشكل ملموس لعام 2026. ويجب على العلامات التجارية التي تدخل السعودية والإمارات وقطر والكويت والبحرين وعُمان التخطيط للمتطلبات المشتركة والخاصة بكل دولة.",
