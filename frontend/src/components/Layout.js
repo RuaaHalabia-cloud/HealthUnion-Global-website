@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import GtmContainer from "@/components/GtmContainer";
 
 const SUPPORTED = ["en", "ar"];
 
@@ -62,6 +63,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <GtmContainer />
       <CookieConsent />
     </div>
   );
