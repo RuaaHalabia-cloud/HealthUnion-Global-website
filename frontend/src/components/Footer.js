@@ -61,7 +61,7 @@ export default function Footer() {
               <a
                 href={`mailto:${t("contact.info.email")}`}
                 aria-label={t("contact.info.emailLabel")}
-                onClick={() => trackEvent("contact_click", { channel: "email", placement: "footer" })}
+                onClick={() => trackEvent("email_click", { placement: "footer" })}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
               >
                 <Mail className="h-4 w-4" />
@@ -78,7 +78,7 @@ export default function Footer() {
                   href={`https://wa.me/${ph.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackEvent("contact_click", { channel: "whatsapp", market: ph.label, placement: "footer" })}
+                  onClick={() => trackEvent("whatsapp_click", { market: ph.label, placement: "footer" })}
                   className="flex items-center gap-2.5 text-sm text-white/60 transition-colors hover:text-white"
                 >
                   <MessageCircle className="h-4 w-4 shrink-0 text-[#0D9488]" />
