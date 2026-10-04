@@ -16,7 +16,7 @@ import useSeo from "@/hooks/useSeo";
 import { getPosts } from "@/lib/api";
 
 const HERO_IMG =
-  "https://images.pexels.com/photos/6213098/pexels-photo-6213098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1400";
+  "/images/illustrative/regulatory-working-session.png";
 
 export default function Home() {
   useSeo("home");
@@ -45,7 +45,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#0A2240]">
         <div className="absolute inset-0">
-          <img src={HERO_IMG} alt="" className="h-full w-full object-cover opacity-60" />
+          <img src={HERO_IMG} alt={t("home.hero.illustrativeAlt")} className="h-full w-full object-cover opacity-60" />
           <div className="absolute inset-0 hu-gradient-navy-teal opacity-90" />
           <div className="absolute inset-0 hu-noise" />
         </div>
@@ -241,7 +241,7 @@ export default function Home() {
                 <Link to={`${base}/insights/${post.slug}`} className="group block h-full">
                   <article className="h-full overflow-hidden rounded-xl bg-white border border-[#1E3A8A]/10 shadow-[var(--hu-shadow-sm)] hover:shadow-[var(--hu-shadow-md)] hover:-translate-y-0.5 transition-[transform,box-shadow]">
                     <div className="aspect-[16/10] overflow-hidden">
-                      <img src={post.image} alt={post.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <img src={post.image} alt={post.image_alt || post.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="p-6">
                       <Badge variant="outline" className="border-[#1E3A8A]/30 text-[#1E3A8A] font-medium">

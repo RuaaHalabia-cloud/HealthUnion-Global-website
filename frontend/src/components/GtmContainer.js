@@ -1,10 +1,11 @@
 import { useEffect } from "react";
+import { hasTrackingConsent } from "@/lib/tracking";
 
 const GTM_ID = String(process.env.REACT_APP_GTM_ID || "").trim();
 const isValidContainerId = /^GTM-[A-Z0-9]+$/i.test(GTM_ID);
 
 function loadContainerAfterConsent() {
-  const hasAcceptedConsent = (() => {
+  const hasLegacyTrackingConsent = (() => {
     try {
       return (
         localStorage.getItem("hu_cookie_consent_v2") === "accepted" ||
@@ -15,7 +16,13 @@ function loadContainerAfterConsent() {
     }
   })();
 
-  if (!isValidContainerId || !hasAcceptedConsent || document.getElementById("hu-gtm-container")) return;
+  if (
+    !isValidContainerId ||
+    (!hasTrackingConsent() && !hasLegacyTrackingConsent) ||
+    document.getElementById("hu-gtm-container")
+  ) {
+    return;
+  }
 
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -33,13 +40,7 @@ export default function GtmContainer() {
   useEffect(() => {
     loadContainerAfterConsent();
     window.addEventListener("hu:analytics-consent", loadContainerAfterConsent);
-    // The first live release used hu_cookie_consent and has no event bridge.
-    // Poll briefly so an accepted legacy consent choice still enables GTM.
-    const consentWatcher = window.setInterval(loadContainerAfterConsent, 400);
-    return () => {
-      window.removeEventListener("hu:analytics-consent", loadContainerAfterConsent);
-      window.clearInterval(consentWatcher);
-    };
+    return () => window.removeEventListener("hu:analytics-consent", loadContainerAfterConsent);
   }, []);
 
   return null;

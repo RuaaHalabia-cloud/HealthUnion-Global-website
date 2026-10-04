@@ -173,7 +173,9 @@ export default function Header() {
                               {(g.items || []).map((it, i) => {
                                 const Icon = icons[i] || Globe;
                                 const destination = g.key === "saudi"
-                                  ? `${base}/sfda-medical-device-registration-mdma`
+                                  ? i === 1
+                                    ? `${base}/sfda-mds-g30-reliance-assessment`
+                                    : `${base}/sfda-medical-device-registration-mdma`
                                   : `${base}/services`;
                                 return (
                                   <Link
@@ -288,10 +290,14 @@ export default function Header() {
                   </SheetClose>
                   <div className="mb-1 ml-2 flex flex-col gap-0.5 border-s border-white/10 ps-3">
                     {groups.flatMap((g) =>
-                      (g.items || []).map((it) => (
+                      (g.items || []).map((it, index) => (
                         <SheetClose asChild key={it.title}>
                           <Link
-                            to={g.key === "saudi" ? `${base}/sfda-medical-device-registration-mdma` : `${base}/services`}
+                            to={g.key === "saudi"
+                              ? index === 1
+                                ? `${base}/sfda-mds-g30-reliance-assessment`
+                                : `${base}/sfda-medical-device-registration-mdma`
+                              : `${base}/services`}
                             className="rounded-md px-2 py-2 text-sm text-white/65 hover:bg-white/5 hover:text-white"
                           >
                             {it.title}

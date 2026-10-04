@@ -25,6 +25,18 @@
       "title": "SFDA Medical Device Registration & MDMA Services in Saudi Arabia · HealthUnion Global",
       "description": "SFDA medical device registration and MDMA support for manufacturers entering Saudi Arabia, including pathway scoping, technical-file readiness and GHAD lifecycle support."
     },
+    "sfdaReliance": {
+      "title": "SFDA MDS-G30 Regulatory Reliance Assessment · HealthUnion Global",
+      "description": "Assess whether an internationally authorised medical device may be eligible for the SFDA MDS-G30 reliance pathway and identify the Saudi-specific work still required."
+    },
+    "sfdaTechnicalFile": {
+      "title": "SFDA Technical File & Gap Assessment · HealthUnion Global",
+      "description": "Review a medical-device technical file against the intended SFDA pathway and identify priority documentation gaps before submission preparation."
+    },
+    "sfdaDistributorSupport": {
+      "title": "Saudi Medical Device Distributor Regulatory Support · HealthUnion Global",
+      "description": "Regulatory support for Saudi medical-device distributors: organise a multi-manufacturer portfolio, screen pathway questions and set a practical documentation roadmap."
+    },
     "privacy": {
       "title": "Privacy & Data Protection · HealthUnion Global",
       "description": "How HealthUnion Global collects, uses and protects personal data, aligned with GDPR, PIPEDA and Saudi PDPL."
@@ -69,8 +81,8 @@
               "desc": "Legal AR hosting in Riyadh"
             },
             {
-              "title": "MDMA & Lifecycle",
-              "desc": "Grant to post-market compliance"
+              "title": "MDS-G30 Reliance Assessment",
+              "desc": "Eligibility and Saudi gap review"
             }
           ]
         },
@@ -108,6 +120,7 @@
       "eyebrow": "International Regulatory Affairs & Compliance",
       "headline": "Global Regulatory Compliance. Accelerated Market Access.",
       "subheadline": "We bridge innovative medical device and cosmetics manufacturers with the world's most stringent regulatory authorities: USA (FDA), Canada (Health Canada), and Saudi Arabia (SFDA).",
+      "illustrativeAlt": "Illustrative regulatory working session with fictional participants",
       "primaryCta": "Request a Regulatory Pathway Assessment",
       "secondaryCta": "Explore our services",
       "stats": [
@@ -351,6 +364,8 @@
         }
       ]
     },
+    "materialsAlt": "Illustrative anonymized regulatory materials; no client information shown",
+    "materialsCaption": "Illustrative materials only — no client or submission information is shown.",
     "faq": {
       "eyebrow": "Frequently asked questions",
       "title": "Common questions before beginning",
@@ -380,6 +395,400 @@
       "button": "Request a Regulatory Pathway Assessment"
     }
   },
+  "sfdaReliance": {
+    "servicesLink": "Explore the SFDA MDS-G30 Reliance Assessment",
+    "hero": {
+      "eyebrow": "Saudi Arabia (SFDA) · Medical Devices",
+      "title": "SFDA MDS-G30 Regulatory Reliance Assessment",
+      "subtitle": "Determine whether your internationally authorised medical device may be suitable for the SFDA reliance pathway, then identify the Saudi-specific documentation and submission work still required.",
+      "primaryCta": "Request a Regulatory Pathway Assessment",
+      "whatsappCta": "Talk to our Saudi team on WhatsApp",
+      "proof": [
+        "Eligibility-first assessment",
+        "RRA approval review",
+        "Saudi-specific gap mapping"
+      ]
+    },
+    "audience": {
+      "eyebrow": "For internationally authorised devices",
+      "title": "Test the pathway before planning the submission",
+      "body": "MDS-G30 allows SFDA to consider certain authorisations and approvals from recognised regulatory authorities during its MDMA review. It does not remove SFDA's independent decision-making or Saudi-specific requirements.",
+      "items": [
+        {
+          "title": "Existing international authorisation",
+          "text": "You hold a current approval and can provide the supporting evidence from a recognised jurisdiction."
+        },
+        {
+          "title": "A matched device and evidence set",
+          "text": "The Saudi device needs to align with the authorised device in its technical characteristics and intended use."
+        },
+        {
+          "title": "A Saudi launch to prepare for",
+          "text": "You need clarity on classification, local requirements and the documentation still needed before MDMA submission."
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "Reliance pathway support",
+      "title": "What the assessment is designed to clarify",
+      "subtitle": "We structure the first review around the current SFDA guidance and the actual evidence available for your device. The result is a practical submission plan, not a promise of eligibility or approval.",
+      "items": [
+        {
+          "title": "RRA approval review",
+          "text": "Review the reference jurisdiction, approval route, validity and evidence needed to support the reliance request."
+        },
+        {
+          "title": "Technical identity check",
+          "text": "Compare the Saudi device with the authorised device, including intended use, design and manufacturing information."
+        },
+        {
+          "title": "Saudi requirements mapping",
+          "text": "Identify Saudi-specific questions on classification, labelling, IFU, user interface, storage and transport."
+        },
+        {
+          "title": "Reliance-form preparation",
+          "text": "Organise the required rationale and supporting information for the reliance form and MDMA application plan."
+        },
+        {
+          "title": "Submission-readiness roadmap",
+          "text": "Set out the remaining workstreams, dependencies and questions to resolve with the manufacturer and local stakeholders."
+        }
+      ]
+    },
+    "eligibility": {
+      "eyebrow": "A focused eligibility screen",
+      "title": "What the MDS-G30 assessment needs to test",
+      "subtitle": "The official guidance sets specific eligibility criteria. We use them to screen the pathway early, alongside the device's actual documentation and regulatory history.",
+      "listTitle": "Core eligibility questions",
+      "items": [
+        "Does the device hold a valid marketing authorisation or approval from a recognised regulatory authority?",
+        "Is the Saudi device technically identical to the authorised device in design, manufacturing process and intended use?",
+        "Can the application meet applicable Saudi requirements, including classification and local product requirements?"
+      ]
+    },
+    "exclusions": {
+      "title": "Pathway limits that need early review",
+      "subtitle": "MDS-G30 identifies exclusions and circumstances that may take a device outside the reliance route or require additional information.",
+      "items": [
+        "Self-registration or self-declaration routes without an independent regulatory or recognised third-party assessment.",
+        "Products granted access primarily through an equivalence-to-a-predicate route.",
+        "Custom-made devices and products with significant post-market recalls, suspensions, withdrawals or restrictions.",
+        "SaMD and AI-enabled devices may be excluded based on intended use, risk, novelty, complexity or other SFDA considerations."
+      ]
+    },
+    "guidanceLink": "Read the current SFDA MDS-G30 guidance (v1.0)",
+    "process": {
+      "eyebrow": "A practical first review",
+      "title": "How we structure the reliance assessment",
+      "subtitle": "Each product is reviewed against the current guidance, the authorisation route and the Saudi market context before a submission approach is recommended.",
+      "items": [
+        {
+          "title": "Review the device and reference approval",
+          "text": "Confirm the legal manufacturer, device scope, intended use and the status and route of the international authorisation."
+        },
+        {
+          "title": "Screen eligibility and exclusions",
+          "text": "Test the available evidence against the MDS-G30 criteria and identify issues that need clarification before relying on the pathway."
+        },
+        {
+          "title": "Map the Saudi documentation delta",
+          "text": "Identify Saudi-specific content and practical requirements that remain outside the reference approval."
+        },
+        {
+          "title": "Plan the reliance form and MDMA submission",
+          "text": "Set out the evidence, rationale, responsibilities and next steps for a complete application plan."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "Common questions about the reliance pathway",
+      "items": [
+        {
+          "question": "Which international authorities are recognised in the current guidance?",
+          "answer": "The current guidance lists Australia (TGA), Canada (Health Canada), the EU/EEA, Japan (PMDA), the UK (MHRA) and the USA (FDA). SFDA notes that this list may be updated periodically."
+        },
+        {
+          "question": "Does an FDA clearance automatically make a device eligible?",
+          "answer": "No. The guidance lists FDA among the recognised authorities but excludes products granted access primarily through an equivalence-to-a-predicate route. We assess the actual authorisation route and device evidence before making a recommendation."
+        },
+        {
+          "question": "Does the reliance pathway guarantee an SFDA MDMA?",
+          "answer": "No. SFDA retains full authority over the marketing authorisation decision and may request additional information or data during review."
+        },
+        {
+          "question": "What review time does the guidance state?",
+          "answer": "The guidance states a standard reliance-pathway review timeline of 35–60 working days for a complete application. It also notes that review may be reduced to 35 working days where the conditions are met. This is not a guarantee for an individual submission."
+        }
+      ]
+    },
+    "disclaimer": "This page provides general information, not legal or regulatory advice. It reflects SFDA MDS-G30 v1.0, dated 9 September 2026. Eligibility, scope, evidence requirements and timelines must be confirmed for the specific device and application.",
+    "finalCta": {
+      "title": "Already authorised outside Saudi Arabia?",
+      "text": "Share the device basics, the reference approval and your Saudi launch objective. We will review the request and respond with a clear next step.",
+      "button": "Request a Regulatory Pathway Assessment"
+    }
+  },
+  "sfdaTechnicalFile": {
+    "servicesLink": "Explore the SFDA Technical File & Gap Assessment",
+    "hero": {
+      "eyebrow": "Saudi Arabia (SFDA) · Medical Devices",
+      "title": "SFDA Technical File & Gap Assessment",
+      "subtitle": "Review your device documentation against the intended Saudi pathway, identify the priority gaps and create a practical plan before submission preparation begins.",
+      "primaryCta": "Request a Regulatory Pathway Assessment",
+      "whatsappCta": "Talk to our Saudi team on WhatsApp",
+      "proof": [
+        "Structured file review",
+        "Saudi pathway context",
+        "Prioritised gap roadmap"
+      ]
+    },
+    "audience": {
+      "eyebrow": "For submission-ready teams",
+      "title": "Turn a document set into a clear readiness view",
+      "body": "A technical file assessment helps manufacturers understand what is already usable, what needs to be clarified and what should be prepared next for the proposed Saudi market-access route.",
+      "items": [
+        {
+          "title": "An existing technical file",
+          "text": "You have a dossier, global product file or core evidence package that needs a structured review."
+        },
+        {
+          "title": "A device entering Saudi Arabia",
+          "text": "You need to map existing documentation to the Saudi classification and proposed submission path."
+        },
+        {
+          "title": "A change to manage",
+          "text": "A product, labelling, manufacturing or market change means the documentation needs to be rechecked before the next step."
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "Technical-file support",
+      "title": "What we review before submission preparation",
+      "subtitle": "The scope is tailored to the device, classification, intended Saudi route and evidence available. We organise the review so that the work remaining is understandable and actionable.",
+      "items": [
+        {
+          "title": "Device and pathway scoping",
+          "text": "Clarify the device, intended purpose, proposed Saudi route, classification context and any variants or accessories in scope."
+        },
+        {
+          "title": "Technical-file structure review",
+          "text": "Review the organisation, traceability and completeness of the available device description, manufacturer information and supporting records."
+        },
+        {
+          "title": "Safety and performance evidence",
+          "text": "Identify evidence questions around essential safety and performance, risk management, verification, validation and clinical or performance support, as applicable."
+        },
+        {
+          "title": "Labelling and IFU review",
+          "text": "Map the available labels, instructions for use and user-facing content against the applicable Saudi submission context."
+        },
+        {
+          "title": "Gap and action roadmap",
+          "text": "Prioritise the documents, owners and dependencies to resolve before submission preparation or a further regulatory assessment."
+        }
+      ]
+    },
+    "focus": {
+      "eyebrow": "A disciplined documentation review",
+      "title": "Core areas of the technical file",
+      "subtitle": "SFDA's medical-device marketing-authorisation requirements call for a maintained technical documentation set that demonstrates conformity with the applicable essential safety and performance principles.",
+      "items": [
+        "Device description and specification, including variants and accessories in scope.",
+        "Intended purpose, intended users, qualification rationale and classification justification.",
+        "Manufacturer information, labelling, instructions for use and user-facing materials.",
+        "Applicable evidence of conformity, risk management, verification, validation and clinical or performance support.",
+        "Quality-management and manufacturing information relevant to the proposed pathway."
+      ]
+    },
+    "output": {
+      "eyebrow": "What you receive",
+      "title": "A prioritised readiness roadmap",
+      "body": "We provide a structured view of the documentation available, the questions or gaps to resolve and the recommended next workstreams. The exact scope and evidence expectations must still be confirmed for the individual device and application."
+    },
+    "guidanceLink": "Read the SFDA MDS-REQ 1 medical-device marketing-authorisation requirements",
+    "process": {
+      "eyebrow": "A practical first review",
+      "title": "How we run a technical-file gap assessment",
+      "subtitle": "The review is designed to help the manufacturer make informed decisions about preparation, responsibilities and timing before moving into submission work.",
+      "items": [
+        {
+          "title": "Define the device and submission context",
+          "text": "Confirm the intended purpose, models or accessories, manufacturer status, planned Saudi route and commercial objective."
+        },
+        {
+          "title": "Inventory the evidence available",
+          "text": "Organise the current technical documentation, QMS information, approvals, labels, IFU and supporting test or clinical materials."
+        },
+        {
+          "title": "Identify gaps and dependencies",
+          "text": "Map the priority questions, missing evidence and document updates against the proposed Saudi pathway."
+        },
+        {
+          "title": "Agree the preparation roadmap",
+          "text": "Set out practical next steps, document owners and decision points before a submission plan is finalised."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "Common questions about a technical-file review",
+      "items": [
+        {
+          "question": "Can we start from our existing FDA, Health Canada or EU documentation?",
+          "answer": "Existing documentation can provide a strong starting point. We assess how it maps to the proposed Saudi route and identify what needs to be adapted, confirmed or added."
+        },
+        {
+          "question": "Does a gap assessment guarantee an SFDA MDMA?",
+          "answer": "No. The assessment identifies readiness questions and recommended workstreams. SFDA retains authority over the application and may require additional information."
+        },
+        {
+          "question": "Does the review cover labels and instructions for use?",
+          "answer": "Yes. We include available labels, IFU and other user-facing content in the review against the applicable Saudi submission context."
+        },
+        {
+          "question": "When should we begin the assessment?",
+          "answer": "Begin before a commercial launch date or submission target is fixed. Early review gives the team time to resolve evidence, document and coordination dependencies."
+        }
+      ]
+    },
+    "disclaimer": "This page provides general information, not legal or regulatory advice. SFDA requirements and technical-documentation expectations must be confirmed for the specific device, classification and application route.",
+    "finalCta": {
+      "title": "Need a clearer view of your file?",
+      "text": "Share the device basics, target Saudi route and the documentation you already hold. We will review the request and respond with a clear next step.",
+      "button": "Request a Regulatory Pathway Assessment"
+    }
+  },
+  "sfdaDistributorSupport": {
+    "servicesLink": "Explore Saudi Medical Device Distributor Regulatory Support",
+    "hero": {
+      "eyebrow": "Saudi Arabia (SFDA) · Medical Devices",
+      "title": "Saudi Medical Device Distributor Regulatory Support",
+      "subtitle": "Bring a multi-manufacturer device portfolio into a clear Saudi regulatory plan: organise the facts, identify pathway questions and coordinate the work required before launch or portfolio expansion.",
+      "primaryCta": "Request a Regulatory Pathway Assessment",
+      "whatsappCta": "Talk to our Saudi team on WhatsApp",
+      "proof": [
+        "Portfolio-level review",
+        "Manufacturer coordination",
+        "Practical launch roadmap"
+      ]
+    },
+    "audience": {
+      "eyebrow": "For Saudi distributor teams",
+      "title": "Make a complex product portfolio manageable",
+      "body": "Distributor teams often need to bring together product details, manufacturer records, market-authorisation status and commercial priorities across several device families. A structured review makes the next regulatory decisions easier to see.",
+      "items": [
+        {
+          "title": "New manufacturer relationships",
+          "text": "You are preparing to represent one or more international manufacturers in the Saudi market."
+        },
+        {
+          "title": "A growing product portfolio",
+          "text": "New devices, models, accessories or procedure packs need a clear pathway and document plan."
+        },
+        {
+          "title": "An established portfolio to review",
+          "text": "You want a better view of documentation, change and lifecycle questions across products already being managed."
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "Distributor-focused support",
+      "title": "What a portfolio assessment can organise",
+      "subtitle": "The scope is tailored to the distributor, the manufacturers and the device families involved. We turn the regulatory questions into a practical work plan without assuming that every product follows the same route.",
+      "items": [
+        {
+          "title": "Portfolio inventory and segmentation",
+          "text": "Organise devices, models, accessories, intended uses and commercial priorities into a working portfolio view."
+        },
+        {
+          "title": "Manufacturer information plan",
+          "text": "Identify the product, quality, authorisation and document information that needs to be confirmed with each manufacturer."
+        },
+        {
+          "title": "Pathway and grouping screen",
+          "text": "Assess the proposed Saudi pathway for each product group and whether any SFDA grouping concept may be relevant."
+        },
+        {
+          "title": "MDMA preparation coordination",
+          "text": "Set out the documents, owners, dependencies and sequencing to prepare a coherent submission workstream."
+        },
+        {
+          "title": "Lifecycle and change readiness",
+          "text": "Highlight the portfolio information and internal handoffs that should be ready for changes, renewals or post-market questions."
+        }
+      ]
+    },
+    "portfolio": {
+      "eyebrow": "Start with a reliable portfolio picture",
+      "title": "Information to assemble before planning",
+      "subtitle": "A productive review starts with enough detail to understand which products belong together and which questions must be handled individually.",
+      "items": [
+        "Manufacturer, device family, intended purpose, models, accessories and risk-class information for each product.",
+        "Current international authorisations, available declarations and technical or quality documentation.",
+        "The proposed Saudi commercial role, source chain and launch priority for each manufacturer and device family.",
+        "Known product, manufacturing, labelling or documentation changes that could affect the next regulatory step.",
+        "Named contacts who can provide manufacturer evidence and make portfolio decisions promptly."
+      ]
+    },
+    "guidance": {
+      "eyebrow": "Grouping must be assessed, not assumed",
+      "title": "Procedure packs and grouping need a case-by-case screen",
+      "body": "SFDA's MDS-G28 guidance describes conditions for medical-device procedure packs. Whether a set of devices can be handled together depends on the exact configuration and the applicable SFDA requirements. We assess the portfolio before recommending a route.",
+      "link": "Read SFDA MDS-G28 guidance on medical-device procedure packs"
+    },
+    "process": {
+      "eyebrow": "A practical distributor workstream",
+      "title": "How we structure portfolio support",
+      "subtitle": "The aim is a clear operating view: what needs to be collected, reviewed, decided and prepared before product-level work moves forward.",
+      "items": [
+        {
+          "title": "Set the portfolio scope",
+          "text": "Confirm the manufacturers, device families, launch objectives, commercial priorities and people responsible for the information."
+        },
+        {
+          "title": "Screen products and product groups",
+          "text": "Review the available facts to identify product-level pathway questions, grouping considerations and information gaps."
+        },
+        {
+          "title": "Coordinate manufacturer evidence",
+          "text": "Create a focused request plan for the authorisations, declarations, technical information and quality records needed next."
+        },
+        {
+          "title": "Agree the readiness roadmap",
+          "text": "Prioritise products, owners, dependencies and decision points before submission preparation or lifecycle work begins."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "Common questions from distributor teams",
+      "items": [
+        {
+          "question": "Can every product model be included in one MDMA?",
+          "answer": "No. Whether products or configurations can be handled together depends on the specific devices and applicable SFDA requirements. We screen each proposed group before recommending an approach."
+        },
+        {
+          "question": "Can you coordinate with our international manufacturers?",
+          "answer": "Yes. We can help organise the evidence request and the regulatory workstream with the manufacturer. The manufacturer remains the source for its product and quality documentation."
+        },
+        {
+          "question": "Can the review include products already in the Saudi market?",
+          "answer": "Yes. The scope can include a portfolio health check that highlights documentation, change, renewal or post-market questions requiring attention."
+        },
+        {
+          "question": "Does this service replace the distributor's legal or regulatory responsibilities?",
+          "answer": "No. Responsibilities and establishment requirements depend on the specific commercial and regulatory arrangement. This service helps organise the facts and plan the work; the applicable obligations must be confirmed for the case."
+        }
+      ]
+    },
+    "disclaimer": "This page provides general information, not legal or regulatory advice. It reflects the SFDA MDS-G28 v1 guidance published in May 2026. Product grouping, establishment responsibilities, authorisations and pathway requirements must be confirmed for the specific portfolio and application.",
+    "finalCta": {
+      "title": "Need a clearer plan for your Saudi portfolio?",
+      "text": "Share the manufacturers, device families and launch priorities you are considering. We will review the request and respond with a clear next step.",
+      "button": "Request a Regulatory Pathway Assessment"
+    }
+  },
   "about": {
     "hero": {
       "eyebrow": "About & Team",
@@ -389,12 +798,14 @@
     "na": {
       "title": "The North American Strategy Unit",
       "location": "Based in Canada",
-      "desc": "Dedicated to managing global technical dossiers, QMS structures, and North American compliance frameworks. This unit translates documentation between FDA, Health Canada and international requirements, ensuring evidence is structured once and leveraged everywhere."
+      "desc": "Dedicated to managing global technical dossiers, QMS structures, and North American compliance frameworks. This unit translates documentation between FDA, Health Canada and international requirements, ensuring evidence is structured once and leveraged everywhere.",
+      "imageAlt": "Illustrative Greater Toronto regulatory workspace; not a HealthUnion Global office"
     },
     "saudi": {
       "title": "The Saudi Operations Unit",
       "location": "Based in Riyadh",
-      "desc": "Dedicated to direct liaison with the Saudi Food and Drug Authority (SFDA), navigating the GHAD ecosystem, and providing on-the-ground authorized representation. This unit holds the local establishment relationships required to host foreign manufacturers."
+      "desc": "Dedicated to direct liaison with the Saudi Food and Drug Authority (SFDA), navigating the GHAD ecosystem, and providing on-the-ground authorized representation. This unit holds the local establishment relationships required to host foreign manufacturers.",
+      "imageAlt": "Illustrative Riyadh regulatory workspace with fictional people; not a HealthUnion Global office"
     },
     "values": {
       "title": "What defines our practice",
@@ -439,6 +850,12 @@
       "subtitle": "Tell us about your product and target markets. Attach a technical PDF if you have one, and we will get back to you with a clear next step.",
       "sfdaMdmaContext": "You are requesting support for SFDA Medical Device Registration & MDMA Services in Saudi Arabia. Saudi Arabia has been selected below so we can route your enquiry correctly.",
       "sfdaMdmaMessage": "I am interested in SFDA Medical Device Registration & MDMA Services in Saudi Arabia. Please contact me about an MDMA readiness assessment.",
+      "sfdaRelianceContext": "You are requesting an SFDA MDS-G30 Regulatory Reliance Assessment. Saudi Arabia has been selected below so we can route your enquiry correctly.",
+      "sfdaRelianceMessage": "I am interested in an SFDA MDS-G30 Regulatory Reliance Assessment. Please contact me about the eligibility of my device and the Saudi-specific requirements.",
+      "sfdaTechnicalFileContext": "You are requesting an SFDA Technical File & Gap Assessment. Saudi Arabia has been selected below so we can route your enquiry correctly.",
+      "sfdaTechnicalFileMessage": "I am interested in an SFDA Technical File & Gap Assessment. Please contact me about the readiness of my documentation for Saudi Arabia.",
+      "sfdaDistributorSupportContext": "You are requesting Saudi Medical Device Distributor Regulatory Support. Saudi Arabia has been selected below so we can route your enquiry correctly.",
+      "sfdaDistributorSupportMessage": "I am interested in Saudi Medical Device Distributor Regulatory Support. Please contact me about organising the regulatory work for my Saudi product portfolio.",
       "company": "Company Name",
       "companyPlaceholder": "Your company's legal name",
       "email": "Work Email",
@@ -581,7 +998,7 @@
     "cookies": "Cookies"
   },
   "cookie": {
-    "text": "We use essential cookies to operate this site and to securely store the information you submit through our forms. No advertising or third-party tracking.",
+    "text": "We use essential cookies to operate this site. If you agree, optional analytics measurement starts to help us understand site use and improve the website. We do not use advertising measurement.",
     "accept": "Accept",
     "decline": "Decline",
     "manage": "Cookie settings",
@@ -612,7 +1029,7 @@
           "Details you provide through our forms: company name, contact details, product category, device classification, target markets and your message.",
           "Regulatory documents (PDF) that you choose to upload.",
           "Your language preference and basic technical data required to operate the site securely.",
-          "We do not use advertising cookies or third-party tracking."
+          "If you agree to optional measurement, limited technical and website-use data may be processed by our Google Analytics and Google Ads measurement tools."
         ]
       },
       {
@@ -662,7 +1079,7 @@
       {
         "title": "Cookies",
         "body": [
-          "We use only essential cookies needed to operate the site and to remember your language and cookie preferences. We do not run advertising or analytics tracking at this time; if we introduce analytics in the future, we will ask for your consent first."
+          "We use essential cookies needed to operate the site and remember your language and cookie preferences. If optional measurement is enabled, Google Analytics and Google Ads measurement use cookies only after you give permission through Cookie Settings. You can accept or decline optional measurement at any time."
         ]
       },
       {

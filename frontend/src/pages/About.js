@@ -10,8 +10,8 @@ export default function About() {
   const { t } = useTranslation();
 
   const units = [
-    { key: "na", icon: Globe2, img: "https://images.pexels.com/photos/13891122/pexels-photo-13891122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-    { key: "saudi", icon: ShieldCheck, img: "https://images.pexels.com/photos/6213098/pexels-photo-6213098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+    { key: "na", icon: Globe2, img: "/images/illustrative/canada-workspace.png", altKey: "about.na.imageAlt" },
+    { key: "saudi", icon: ShieldCheck, img: "/images/illustrative/riyadh-workspace.png", altKey: "about.saudi.imageAlt" },
   ];
   const valueIcons = [Layers, GitMerge, Lock];
   const values = t("about.values.items", { returnObjects: true }) || [];
@@ -34,7 +34,7 @@ export default function About() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                   <div className={`lg:col-span-5 ${reverse ? "lg:order-2" : ""}`}>
                     <div className="overflow-hidden rounded-xl border border-[#1E3A8A]/10 shadow-[var(--hu-shadow-md)]">
-                      <img src={u.img} alt="" className="h-72 w-full object-cover" />
+                      <img src={u.img} alt={t(u.altKey)} className="h-72 w-full object-cover" />
                     </div>
                   </div>
                   <div className={`lg:col-span-7 ${reverse ? "lg:order-1" : ""}`}>

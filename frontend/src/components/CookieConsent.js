@@ -3,8 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Cookie } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const KEY = "hu_cookie_consent";
+import { CONSENT_STORAGE_KEY } from "@/lib/tracking";
 
 export default function CookieConsent() {
   const { t } = useTranslation();
@@ -15,10 +14,11 @@ export default function CookieConsent() {
   useEffect(() => {
     let choice = null;
     try {
-      choice = localStorage.getItem(KEY);
+      choice = localStorage.getItem(CONSENT_STORAGE_KEY);
     } catch (e) {
       choice = null;
     }
+    window.__huConsent = choice;
     if (!choice) {
       const id = setTimeout(() => setVisible(true), 600);
       return () => clearTimeout(id);
@@ -34,12 +34,12 @@ export default function CookieConsent() {
 
   const decide = (value) => {
     try {
-      localStorage.setItem(KEY, value);
+      localStorage.setItem(CONSENT_STORAGE_KEY, value);
     } catch (e) {
       // ignore storage errors (private mode, etc.)
     }
-    // Future analytics can gate on this flag before initialising.
     window.__huConsent = value;
+    window.dispatchEvent(new Event("hu:analytics-consent"));
     setVisible(false);
   };
 

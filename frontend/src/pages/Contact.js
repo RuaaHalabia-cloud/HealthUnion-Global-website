@@ -43,6 +43,24 @@ import { trackEvent } from "@/lib/tracking";
 const MARKETS = ["usa", "canada", "saudi_arabia", "other_gcc"];
 const DEVICE_CLASSES = ["class_i", "class_iia", "class_iib", "class_iii"];
 const MAX_BYTES = 20 * 1024 * 1024;
+const SERVICE_INTERESTS = {
+  sfda_mdma_registration: {
+    contextKey: "sfdaMdmaContext",
+    messageKey: "sfdaMdmaMessage",
+  },
+  sfda_mds_g30_reliance: {
+    contextKey: "sfdaRelianceContext",
+    messageKey: "sfdaRelianceMessage",
+  },
+  sfda_technical_file_gap: {
+    contextKey: "sfdaTechnicalFileContext",
+    messageKey: "sfdaTechnicalFileMessage",
+  },
+  saudi_distributor_regulatory_support: {
+    contextKey: "sfdaDistributorSupportContext",
+    messageKey: "sfdaDistributorSupportMessage",
+  },
+};
 
 const inputCls =
   "h-12 rounded-xl border-[#1E3A8A]/12 bg-[#F8FAFC] focus-visible:bg-white focus-visible:border-[#0D9488] focus-visible:ring-2 focus-visible:ring-[#0D9488]/15";
@@ -53,9 +71,9 @@ export default function Contact() {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const fileInputRef = useRef(null);
-  const serviceInterest = searchParams.get("service") === "sfda_mdma_registration"
-    ? "sfda_mdma_registration"
-    : "";
+  const requestedService = searchParams.get("service");
+  const serviceCopy = SERVICE_INTERESTS[requestedService];
+  const serviceInterest = serviceCopy ? requestedService : "";
 
   const [form, setForm] = useState({
     company_name: "",
@@ -64,7 +82,7 @@ export default function Contact() {
     product_category: "",
     device_classification: "",
     target_markets: serviceInterest ? ["saudi_arabia"] : [],
-    message: serviceInterest ? t("contact.form.sfdaMdmaMessage") : "",
+    message: serviceInterest ? t(`contact.form.${serviceCopy.messageKey}`) : "",
     service_interest: serviceInterest,
     consent: false,
     website: "", // honeypot
@@ -144,7 +162,8 @@ export default function Contact() {
         return;
       }
       setSuccess(true);
-      trackEvent("lead_form_submit", {
+      trackEvent("generate_lead", {
+        lead_channel: "website_intake",
         target_market: form.target_markets.includes("saudi_arabia") ? "saudi_arabia" : "other",
         service_interest: form.service_interest || "general",
       });
@@ -165,7 +184,7 @@ export default function Contact() {
       product_category: "",
       device_classification: "",
       target_markets: serviceInterest ? ["saudi_arabia"] : [],
-      message: serviceInterest ? t("contact.form.sfdaMdmaMessage") : "",
+      message: serviceInterest ? t(`contact.form.${serviceCopy.messageKey}`) : "",
       service_interest: serviceInterest,
       consent: false,
       website: "",
@@ -255,7 +274,7 @@ export default function Contact() {
                   <p className="mt-2 text-[#0A2240]/65">{t("contact.form.subtitle")}</p>
                   {serviceInterest && (
                     <div className="mt-5 rounded-xl border border-[#0D9488]/25 bg-[#0D9488]/5 px-4 py-3 text-sm text-[#0A2240]/75">
-                      {t("contact.form.sfdaMdmaContext")}
+                      {t(`contact.form.${serviceCopy.contextKey}`)}
                     </div>
                   )}
                   <div className="mt-6 rounded-2xl border border-[#1E3A8A]/10 bg-[#F8FAFC] p-5">
@@ -265,7 +284,7 @@ export default function Contact() {
                     <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                       <a
                         href={`mailto:${t("contact.info.email")}`}
-                        onClick={() => trackEvent("contact_click", { channel: "email", placement: "quick_enquiry" })}
+                        onClick={() => trackEvent("email_click", { placement: "quick_enquiry" })}
                         className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#1E3A8A]/15 bg-white px-4 py-2.5 text-sm font-semibold text-[#1E3A8A] transition-colors hover:border-[#0D9488] hover:text-[#0D9488]"
                       >
                         <Mail className="h-4 w-4" />
@@ -275,7 +294,7 @@ export default function Contact() {
                         href="https://wa.me/966592369636"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => trackEvent("contact_click", { channel: "whatsapp", market: "saudi_arabia", placement: "quick_enquiry" })}
+                        onClick={() => trackEvent("whatsapp_click", { market: "saudi_arabia", placement: "quick_enquiry" })}
                         className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#1E3A8A]/15 bg-white px-4 py-2.5 text-sm font-semibold text-[#1E3A8A] transition-colors hover:border-[#0D9488] hover:text-[#0D9488]"
                       >
                         <MessageCircle className="h-4 w-4" />
@@ -287,7 +306,7 @@ export default function Contact() {
                       {t("contact.quick.ndaText")} {" "}
                       <a
                         href={`mailto:${t("contact.info.email")}?subject=${encodeURIComponent("NDA request")}`}
-                        onClick={() => trackEvent("contact_click", { channel: "email", intent: "nda", placement: "quick_enquiry" })}
+                        onClick={() => trackEvent("email_click", { intent: "nda", placement: "quick_enquiry" })}
                         className="font-semibold text-[#1E3A8A] hover:text-[#0D9488]"
                       >
                         {t("contact.quick.ndaCta")}
@@ -562,7 +581,7 @@ export default function Contact() {
                 <div className="mt-4 space-y-3">
                   <a
                     href={`mailto:${t("contact.info.email")}`}
-                    onClick={() => trackEvent("contact_click", { channel: "email", placement: "contact" })}
+                    onClick={() => trackEvent("email_click", { placement: "contact" })}
                     className="group flex items-center gap-4 rounded-2xl border border-[#1E3A8A]/10 bg-white p-4 transition-colors hover:border-[#0D9488]/30"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0D9488]/10 text-[#0D9488]">
@@ -578,7 +597,7 @@ export default function Contact() {
                     <a
                       key={ph.whatsapp}
                       href={`https://wa.me/${ph.whatsapp}`}
-                      onClick={() => trackEvent("contact_click", { channel: "whatsapp", market: ph.label, placement: "contact" })}
+                      onClick={() => trackEvent("whatsapp_click", { market: ph.label, placement: "contact" })}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center gap-4 rounded-2xl border border-[#1E3A8A]/10 bg-white p-4 transition-colors hover:border-[#0D9488]/30"
