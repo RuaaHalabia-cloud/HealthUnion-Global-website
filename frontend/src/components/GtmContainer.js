@@ -1,19 +1,21 @@
 import { useEffect } from "react";
-import { hasTrackingConsent } from "@/lib/tracking";
 
 const GTM_ID = String(process.env.REACT_APP_GTM_ID || "").trim();
 const isValidContainerId = /^GTM-[A-Z0-9]+$/i.test(GTM_ID);
 
 function loadContainerAfterConsent() {
-  const legacyConsent = (() => {
+  const hasAcceptedConsent = (() => {
     try {
-      return localStorage.getItem("hu_cookie_consent") === "accepted";
+      return (
+        localStorage.getItem("hu_cookie_consent_v2") === "accepted" ||
+        localStorage.getItem("hu_cookie_consent") === "accepted"
+      );
     } catch (e) {
       return false;
     }
   })();
 
-  if (!isValidContainerId || (!hasTrackingConsent() && !legacyConsent) || document.getElementById("hu-gtm-container")) return;
+  if (!isValidContainerId || !hasAcceptedConsent || document.getElementById("hu-gtm-container")) return;
 
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
