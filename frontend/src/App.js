@@ -12,6 +12,9 @@ import Privacy from "@/pages/Privacy";
 import SfdaMdma from "@/pages/SfdaMdma";
 import Terms from "@/pages/Terms";
 import { Toaster } from "@/components/ui/sonner";
+import SfdaReliance from "@/pages/SfdaReliance";
+import SfdaTechnicalFile from "@/pages/SfdaTechnicalFile";
+import SfdaDistributorSupport from "@/pages/SfdaDistributorSupport";
 
 function App() {
   const stored = typeof window !== "undefined" ? localStorage.getItem("hu_lang") : null;
@@ -29,6 +32,9 @@ function App() {
           <Route path="insights/:slug" element={<InsightDetail />} />
           <Route path="contact" element={<Contact />} />
           <Route path="sfda-medical-device-registration-mdma" element={<SfdaMdma />} />
+          <Route path="sfda-mds-g30-reliance-assessment" element={<SfdaReliance />} />
+          <Route path="sfda-technical-file-gap-assessment" element={<SfdaTechnicalFile />} />
+          <Route path="saudi-medical-device-distributor-regulatory-support" element={<SfdaDistributorSupport />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms />} />
         </Route>
