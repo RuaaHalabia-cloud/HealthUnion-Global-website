@@ -9,16 +9,15 @@ import {
   FileCheck2,
   BadgeCheck,
   FlaskConical,
+  ChevronDown,
 } from "lucide-react";
 import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Sheet,
   SheetContent,
@@ -43,6 +42,7 @@ export default function Header() {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const isRtl = lang === "ar";
   const base = `/${lang}`;
@@ -65,6 +65,7 @@ export default function Header() {
 
   const switchLang = (newLang) => {
     if (newLang === lang) return;
+    setServicesOpen(false);
     const rest = location.pathname.replace(/^\/(en|ar)/, "");
     navigate(`/${newLang}${rest}${location.hash || ""}`);
   };
@@ -136,26 +137,33 @@ export default function Header() {
               {t("nav.home")}
             </NavLink>
 
-            <NavigationMenu dir={isRtl ? "rtl" : "ltr"}>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger
-                    data-testid="header-services-trigger"
-                    className={cn(
-                      navItemDark,
-                      "bg-transparent data-[state=open]:bg-white/10 data-[state=open]:text-white data-[state=open]:hover:bg-white/10 data-[state=open]:focus:bg-white/10"
-                    )}
-                  >
-                    {t("nav.services")}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[min(92vw,720px)] p-4">
+            <DropdownMenu open={servicesOpen} onOpenChange={setServicesOpen} dir={isRtl ? "rtl" : "ltr"}>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  data-testid="header-services-trigger"
+                  className={cn(
+                    navItemDark,
+                    "group gap-1 bg-transparent data-[state=open]:bg-white/10 data-[state=open]:text-white data-[state=open]:hover:bg-white/10 data-[state=open]:focus:bg-white/10"
+                  )}
+                >
+                  {t("nav.services")}
+                  <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align={isRtl ? "end" : "start"}
+                sideOffset={10}
+                className="w-[min(92vw,720px)] overflow-visible rounded-xl border border-[#0A2240]/10 bg-white p-0 shadow-xl"
+              >
+                <div className="p-4">
                       <div className="mb-3 flex items-center justify-between px-2">
                         <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0D9488]">
                           {mega.label}
                         </span>
                         <Link
                           to={`${base}/services`}
+                          onClick={() => setServicesOpen(false)}
                           className="text-xs font-medium text-[#1E3A8A] hover:underline"
                         >
                           {mega.viewAll}
@@ -181,6 +189,7 @@ export default function Header() {
                                   <Link
                                     key={it.title}
                                     to={destination}
+                                    onClick={() => setServicesOpen(false)}
                                     data-testid="header-mega-item"
                                     className="group flex items-start gap-3 rounded-lg p-2 transition-colors hover:bg-[#F8FAFC]"
                                   >
@@ -208,17 +217,15 @@ export default function Header() {
                           <div className="text-sm font-semibold">{mega.promoTitle}</div>
                           <div className="text-xs text-white/80">{mega.promoText}</div>
                         </div>
-                        <Link to={`${base}/contact`}>
+                        <Link to={`${base}/contact`} onClick={() => setServicesOpen(false)}>
                           <Button className="whitespace-nowrap bg-white font-semibold text-[#0A2240] hover:bg-white/90">
                             {t("nav.cta")}
                           </Button>
                         </Link>
                       </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <button type="button" data-testid="header-markets-link" onClick={goToMarkets} className={navItemDark}>
               {t("nav.markets")}
