@@ -141,7 +141,7 @@ export default function SfdaMdmaRenewal() {
             {t.intro}
           </p>
           <a
-            href={`/${language}/contact`}
+            href={`/${language}/contact?service=sfda_mdma_renewal`}
             className="inline-block rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-600"
           >
             {t.button}
@@ -212,7 +212,7 @@ export default function SfdaMdmaRenewal() {
           {t.ctaText}
         </p>
         <a
-          href={`/${language}/contact`}
+          href={`/${language}/contact?service=sfda_mdma_renewal`}
           className="inline-block rounded-lg bg-teal-500 px-7 py-3 font-semibold text-white hover:bg-teal-600"
         >
           {t.contact}
