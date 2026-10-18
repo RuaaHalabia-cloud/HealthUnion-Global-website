@@ -24,7 +24,7 @@ export default function SaudiArabia() {
           </p>
 
           <a
-            href="/contact"
+            href="/en/contact"
             className="inline-block rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-600"
           >
             Request a Regulatory Assessment
@@ -70,7 +70,7 @@ export default function SaudiArabia() {
         </p>
 
         <a
-          href="/contact"
+          href="/en/contact"
           className="inline-block rounded-lg bg-slate-900 px-7 py-3 font-semibold text-white hover:bg-slate-800"
         >
           Contact HealthUnion Global
