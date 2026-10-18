@@ -10,6 +10,9 @@ import InsightDetail from "@/pages/InsightDetail";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import SfdaMdma from "@/pages/SfdaMdma";
+
+import SaudiArabia from "@/pages/SaudiArabia";
+
 import Terms from "@/pages/Terms";
 import { Toaster } from "@/components/ui/sonner";
 import SfdaReliance from "@/pages/SfdaReliance";
@@ -27,6 +30,9 @@ function App() {
         <Route path="/:lang" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
+  
+<Route path="saudi-arabia" element={<SaudiArabia />} />
+
           <Route path="about" element={<About />} />
           <Route path="insights" element={<Insights />} />
           <Route path="insights/:slug" element={<InsightDetail />} />
