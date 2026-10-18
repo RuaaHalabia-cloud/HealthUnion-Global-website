@@ -60,6 +60,24 @@ const SERVICE_INTERESTS = {
     contextKey: "sfdaDistributorSupportContext",
     messageKey: "sfdaDistributorSupportMessage",
   },
+  
+  sfda_authorized_representative: {
+    contextKey: "sfdaArContext",
+    messageKey: "sfdaArMessage",
+  },
+  sfda_mdma_renewal: {
+    contextKey: "sfdaRenewalContext",
+    messageKey: "sfdaRenewalMessage",
+  },
+  sfda_classification: {
+    contextKey: "sfdaClassificationContext",
+    messageKey: "sfdaClassificationMessage",
+  },
+  sfda_compliance: {
+    contextKey: "sfdaComplianceContext",
+    messageKey: "sfdaComplianceMessage",
+  },
+
 };
 
 const inputCls =
