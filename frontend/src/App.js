@@ -19,6 +19,9 @@ import SfdaMdmaRenewal from "@/pages/SfdaMdmaRenewal";
 
 import SfdaClassification from "@/pages/SfdaClassification";
 
+import SfdaCompliance from "@/pages/SfdaCompliance";
+
+
 
 
 
@@ -56,6 +59,12 @@ function App() {
   path="sfda-medical-device-classification"
   element={<SfdaClassification />}
 />
+    
+<Route
+  path="sfda-medical-device-compliance"
+  element={<SfdaCompliance />}
+/>
+
 
 
 
