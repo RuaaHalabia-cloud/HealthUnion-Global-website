@@ -26,7 +26,8 @@ const content = {
       },
       {
         name: "Saudi Authorized Representative Coordination",
-        path: "contact"
+        path: "saudi-authorized-representative"
+
       },
       {
         name: "SFDA Compliance & Documentation Support",
@@ -35,6 +36,7 @@ const content = {
       {
         name: "MDMA Renewal and Application Support",
         path: "contact"
+
       }
     ],
     whyTitle: "Why Choose HealthUnion Global?",
@@ -90,7 +92,7 @@ const content = {
       },
       {
         name: "التنسيق لخدمات الممثل المعتمد في السعودية",
-        path: "contact"
+path: "saudi-authorized-representative"
       },
       {
         name: "دعم الامتثال التنظيمي ومتطلبات التوثيق",
