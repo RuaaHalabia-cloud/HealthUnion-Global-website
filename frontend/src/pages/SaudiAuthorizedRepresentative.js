@@ -119,7 +119,8 @@ export default function SaudiAuthorizedRepresentative() {
             {t.intro}
           </p>
           <a
-            href={`/${language}/contact`}
+            
+href={`/${language}/contact?service=sfda_authorized_representative`}
             className="inline-block rounded-lg bg-teal-500 px-6 py-3 font-semibold text-white hover:bg-teal-600"
           >
             {t.button}
@@ -189,7 +190,8 @@ export default function SaudiAuthorizedRepresentative() {
           {t.ctaText}
         </p>
         <a
-          href={`/${language}/contact`}
+          
+href={`/${language}/contact?service=sfda_authorized_representative`}
           className="inline-block rounded-lg bg-teal-500 px-7 py-3 font-semibold text-white hover:bg-teal-600"
         >
           {t.contact}
