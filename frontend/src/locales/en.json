@@ -856,6 +856,16 @@
       "sfdaTechnicalFileMessage": "I am interested in an SFDA Technical File & Gap Assessment. Please contact me about the readiness of my documentation for Saudi Arabia.",
       "sfdaDistributorSupportContext": "You are requesting Saudi Medical Device Distributor Regulatory Support. Saudi Arabia has been selected below so we can route your enquiry correctly.",
       "sfdaDistributorSupportMessage": "I am interested in Saudi Medical Device Distributor Regulatory Support. Please contact me about organising the regulatory work for my Saudi product portfolio.",
+      
+"sfdaArContext": "You are requesting Saudi Authorized Representative support. Saudi Arabia has been selected as your target market.",
+"sfdaArMessage": "I am interested in Saudi Authorized Representative services. Please contact me to discuss the requirements for my medical devices.",
+"sfdaRenewalContext": "You are requesting SFDA MDMA Renewal support. Saudi Arabia has been selected as your target market.",
+"sfdaRenewalMessage": "I need assistance with renewing an SFDA Medical Device Marketing Authorization. Please contact me to review my authorization status.",
+"sfdaClassificationContext": "You are requesting an SFDA Medical Device Classification Assessment. Saudi Arabia has been selected as your target market.",
+"sfdaClassificationMessage": "I need assistance with SFDA medical device classification and regulatory strategy. Please contact me to discuss my products.",
+"sfdaComplianceContext": "You are requesting SFDA Compliance and Documentation Support. Saudi Arabia has been selected as your target market.",
+"sfdaComplianceMessage": "I am interested in SFDA compliance and documentation support. Please contact me to discuss my regulatory requirements.",
+
       "company": "Company Name",
       "companyPlaceholder": "Your company's legal name",
       "email": "Work Email",
