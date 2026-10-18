@@ -31,7 +31,7 @@ const content = {
       },
       {
         name: "SFDA Compliance & Documentation Support",
-        path: "saudi-medical-device-distributor-regulatory-support"
+        path: "sfda-medical-device-compliance"
       },
       {
         name: "MDMA Renewal and Application Support",
@@ -96,7 +96,7 @@ path: "saudi-authorized-representative"
       },
       {
         name: "دعم الامتثال التنظيمي ومتطلبات التوثيق",
-        path: "saudi-medical-device-distributor-regulatory-support"
+        path: "sfda-medical-device-compliance"
       },
       {
         name: "تجديد أذونات التسويق ودعم طلبات التسجيل",
