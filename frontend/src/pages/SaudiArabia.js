@@ -58,7 +58,60 @@ export default function SaudiArabia() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-16 text-center">
+      
+<section className="bg-white px-6 py-16">
+  <div className="mx-auto max-w-5xl">
+    <h2 className="mb-6 text-3xl font-bold text-slate-900">
+      Why Choose HealthUnion Global?
+    </h2>
+
+    <p className="mb-8 text-lg text-slate-600">
+      HealthUnion Global is a Canadian-based regulatory
+      affairs consultancy helping medical device
+      manufacturers navigate regulatory requirements
+      in Saudi Arabia and international markets.
+    </p>
+
+    <div className="grid gap-6 md:grid-cols-2">
+      {[
+        {
+          title: "International Regulatory Perspective",
+          description:
+            "Regulatory knowledge covering Saudi Arabia, Canada, and the United States."
+        },
+        {
+          title: "SFDA-Focused Support",
+          description:
+            "Practical assistance with MDMA applications, classification, and technical documentation."
+        },
+        {
+          title: "Support for International Manufacturers",
+          description:
+            "Guidance for manufacturers preparing to enter the Saudi medical device market."
+        },
+        {
+          title: "Personalized Regulatory Guidance",
+          description:
+            "Direct communication and project-specific support throughout the regulatory process."
+        }
+      ].map((item) => (
+        <div
+          key={item.title}
+          className="rounded-xl border border-slate-200 p-6 shadow-sm"
+        >
+          <h3 className="mb-3 text-xl font-semibold text-slate-900">
+            {item.title}
+          </h3>
+          <p className="text-slate-600">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+          <section className="bg-slate-50 px-6 py-16 text-center">
         <h2 className="mb-4 text-3xl font-bold text-slate-900">
           Planning to Enter the Saudi Medical Device Market?
         </h2>
