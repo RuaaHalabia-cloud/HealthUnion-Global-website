@@ -2,6 +2,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+import useSeo from "@/hooks/useSeo";
+
 const content = {
   en: {
     eyebrow: "HealthUnion Global | Saudi Arabia",
@@ -137,6 +139,7 @@ path: "saudi-authorized-representative"
 
 export default function SaudiArabia() {
   const { lang } = useParams();
+  useSeo("saudiArabia");
   const language = lang === "ar" ? "ar" : "en";
   const t = content[language];
 
