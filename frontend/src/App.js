@@ -17,6 +17,9 @@ import SaudiAuthorizedRepresentative from "@/pages/SaudiAuthorizedRepresentative
 
 import SfdaMdmaRenewal from "@/pages/SfdaMdmaRenewal";
 
+import SfdaClassification from "@/pages/SfdaClassification";
+
+
 
 
 import Terms from "@/pages/Terms";
@@ -48,6 +51,12 @@ function App() {
   path="sfda-mdma-renewal"
   element={<SfdaMdmaRenewal />}
 />
+    
+<Route
+  path="sfda-medical-device-classification"
+  element={<SfdaClassification />}
+/>
+
 
 
 
