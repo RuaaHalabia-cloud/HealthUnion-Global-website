@@ -18,7 +18,7 @@ const content = {
       },
       {
         name: "Medical Device Classification & Regulatory Strategy",
-        path: "contact"
+        path: "sfda-medical-device-classification"
       },
       {
         name: "Technical File Preparation and Review",
@@ -84,7 +84,7 @@ const content = {
       },
       {
         name: "تصنيف الأجهزة الطبية ووضع الاستراتيجية التنظيمية",
-        path: "contact"
+        path: "sfda-medical-device-classification"
       },
       {
         name: "إعداد ومراجعة الملفات الفنية للأجهزة الطبية",
