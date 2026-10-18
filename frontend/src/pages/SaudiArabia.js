@@ -38,23 +38,47 @@ export default function SaudiArabia() {
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {[
-            "SFDA Medical Device Marketing Authorization (MDMA)",
-            "Medical Device Classification & Regulatory Strategy",
-            "Technical File Preparation and Review",
-            "Saudi Authorized Representative Coordination",
-            "SFDA Compliance & Documentation Support",
-            "MDMA Renewal and Application Support"
-          ].map((service) => (
-            <div
-              key={service}
-              className="rounded-xl border border-slate-200 p-6 shadow-sm"
-            >
-              <h3 className="text-lg font-semibold text-slate-800">
-                {service}
-              </h3>
-            </div>
-          ))}
+          
+{[
+  {
+    name: "SFDA Medical Device Marketing Authorization (MDMA)",
+    link: "/en/sfda-medical-device-registration-mdma"
+  },
+  {
+    name: "Medical Device Classification & Regulatory Strategy",
+    link: "/en/contact"
+  },
+  {
+    name: "Technical File Preparation and Review",
+    link: "/en/sfda-technical-file-gap-assessment"
+  },
+  {
+    name: "Saudi Authorized Representative Coordination",
+    link: "/en/contact"
+  },
+  {
+    name: "SFDA Compliance & Documentation Support",
+    link: "/en/saudi-medical-device-distributor-regulatory-support"
+  },
+  {
+    name: "MDMA Renewal and Application Support",
+    link: "/en/contact"
+  }
+].map((service) => (
+  <a
+    key={service.name}
+    href={service.link}
+    className="block rounded-xl border border-slate-200 p-6 shadow-sm transition hover:border-teal-500 hover:shadow-md"
+  >
+    <h3 className="text-lg font-semibold text-slate-800">
+      {service.name}
+    </h3>
+    <p className="mt-3 text-sm font-medium text-teal-700">
+      Learn More →
+    </p>
+  </a>
+))}
+
         </div>
       </section>
 
