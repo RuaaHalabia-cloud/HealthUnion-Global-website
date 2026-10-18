@@ -35,7 +35,7 @@ const content = {
       },
       {
         name: "MDMA Renewal and Application Support",
-        path: "contact"
+        path: "sfda-mdma-renewal"
 
       }
     ],
@@ -100,7 +100,7 @@ path: "saudi-authorized-representative"
       },
       {
         name: "تجديد أذونات التسويق ودعم طلبات التسجيل",
-        path: "contact"
+        path: "sfda-mdma-renewal"
       }
     ],
     whyTitle: "لماذا تختار هيلث يونيون جلوبال؟",
