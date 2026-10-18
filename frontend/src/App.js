@@ -15,6 +15,9 @@ import SaudiArabia from "@/pages/SaudiArabia";
 
 import SaudiAuthorizedRepresentative from "@/pages/SaudiAuthorizedRepresentative";
 
+import SfdaMdmaRenewal from "@/pages/SfdaMdmaRenewal";
+
+
 
 import Terms from "@/pages/Terms";
 import { Toaster } from "@/components/ui/sonner";
@@ -40,6 +43,12 @@ function App() {
   path="saudi-authorized-representative"
   element={<SaudiAuthorizedRepresentative />}
 />
+    
+<Route
+  path="sfda-mdma-renewal"
+  element={<SfdaMdmaRenewal />}
+/>
+
 
 
           <Route path="about" element={<About />} />
