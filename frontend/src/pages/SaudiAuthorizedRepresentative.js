@@ -1,6 +1,7 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const content = {
   en: {
@@ -99,6 +100,7 @@ const content = {
 
 export default function SaudiAuthorizedRepresentative() {
   const { lang } = useParams();
+  useSeo("saudiAuthorizedRepresentative");
   const language = lang === "ar" ? "ar" : "en";
   const t = content[language];
 
