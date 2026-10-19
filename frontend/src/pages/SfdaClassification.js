@@ -1,6 +1,7 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
+import useSeo from "@/hooks/useSeo";
 
 const content = {
   en: {
@@ -121,6 +122,7 @@ const content = {
 
 export default function SfdaClassification() {
   const { lang } = useParams();
+  useSeo("sfdaClassification");
   const language = lang === "ar" ? "ar" : "en";
   const t = content[language];
 
