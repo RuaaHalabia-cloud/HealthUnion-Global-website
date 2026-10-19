@@ -307,6 +307,15 @@ export default function Header() {
                       {t("nav.services")}
                     </NavLink>
                   </SheetClose>
+                      
+<SheetClose asChild>
+  <NavLink
+    to={`${base}/saudi-arabia`}
+    className="rounded-lg px-3 py-3 text-sm font-semibold text-teal-300 hover:bg-white/10 hover:text-white"
+  >
+    {isRtl ? "جميع خدمات الهيئة السعودية" : "Explore All SFDA Services"}
+  </NavLink>
+</SheetClose>
                   <div className="mb-1 ml-2 flex flex-col gap-0.5 border-s border-white/10 ps-3">
                     {groups.flatMap((g) =>
                       (g.items || []).map((it, index) => (
