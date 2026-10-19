@@ -168,6 +168,14 @@ export default function Header() {
                         >
                           {mega.viewAll}
                         </Link>
+                            
+<Link
+  to={`${base}/saudi-arabia`}
+  onClick={() => setServicesOpen(false)}
+  className="text-xs font-semibold text-[#0D9488] hover:underline"
+>
+  {isRtl ? "خدمات الهيئة السعودية" : "Saudi Arabia – SFDA Services"}
+</Link>
                       </div>
 
                       <div className="grid grid-cols-1 gap-x-2 gap-y-3 sm:grid-cols-3">
